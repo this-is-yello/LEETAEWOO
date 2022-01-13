@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform-3d</title>
+    <style>
+        :root {
+            --ratc-size: 100px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+        div {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.3;
+        }
+        div:nth-child(1) {
+            transform: rotateY(0deg) translate3d(0, 0, var(--ratc-size));
+            background-color: red;
+        }
+        div:nth-child(2) {
+            transform: rotateY(90deg) translate3d(0, 0, var(--ratc-size));
+            background-color: green;
+        }
+        div:nth-child(3) {
+            transform: rotateY(180deg) translate3d(0, 0, var(--ratc-size));
+            background-color: blue;
+        }
+        div:nth-child(4) {
+            transform: rotateY(270deg) translate3d(0, 0, var(--ratc-size));
+            background-color: yellow;
+        }
+        div:nth-child(5) {
+            transform: rotateX(90deg) translate3d(0, 0, var(--ratc-size));
+            background-color: brown;
+        }
+        div:nth-child(6) {
+            transform: rotateX(270deg) translate3d(0, 0, var(--ratc-size));
+            background-color: pink;
+        }
+
+
+        section {
+            animation: rint 3s linear 0s infinite;
+            transform-style: preserve-3d;
+        }
+        @keyframes rint {
+            from {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>
