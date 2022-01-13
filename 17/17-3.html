@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #graph {
+            width: 700px;
+            overflow: hidden;
+            border: 2px solid black;
+            margin: 30px;
+        }
+        .box {
+            width: 30px;
+            height: 50px;
+            position: relative;
+            background-color: blue;
+            margin: 10px;
+            transition-property: backgroind-color, width;
+            transition-duration: 1S, 5s;
+        }
+        #graph:hover .box {
+            width: 500px;
+        }
+        #graph:hover .box:nth-child(1) {
+            background-color: red;
+            width: 100px;
+        }
+        #graph:hover .box:nth-child(2) {
+            background-color: green;
+            width: 400px;
+        }
+        #graph:hover .box:nth-child(3) {
+            background-color: blueviolet;
+            width: 200px;
+        }
+        #graph:hover .box:nth-child(4) {
+            background-color: dodgerblue;
+            width: 300px;
+        }
+        #graph:hover .box:nth-child(5) {
+            background-color: brown;
+            width: 500px;
+        }
+
+        /*.box:nth-child(1) {transition-delay: 0s;}
+        .box:nth-child(2) {transition-delay: 0.1s;}
+        .box:nth-child(3) {transition-delay: 0.2s;}
+        .box:nth-child(4) {transition-delay: 0.3s;}
+        .box:nth-child(5) {transition-delay: 0.4s;}*/
+
+        .box:nth-child(1) {transition-timing-function: linear;}
+        .box:nth-child(2) {transition-timing-function: ease;}
+        .box:nth-child(3) {transition-timing-function: ease-in;}
+        .box:nth-child(4) {transition-timing-function: ease-in-out;}
+        .box:nth-child(5) {transition-timing-function: ease-out;}
+    </style>
+</head>
+<body>
+    <div id="graph">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
