@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>touch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            margin: 100px 100px;
+            width: 500px;
+            height: 500px;
+            background-color: #999;
+            position: relative;
+        }
+
+        .loading {
+            position: absolute;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .loading>div {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation-name: rint1;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transform: scale(0);
+        }
+
+        
+        .box1 {
+            width: 100px;
+            height: 100px;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            animation-delay: 0.2s;
+        }
+        .box3 {
+            width: 100px;
+            height: 100px;
+            animation-delay: 0.4s;
+        }
+        .box4 {
+            width: 100px;
+            height: 100px;
+            animation-delay: 0.6s;
+        }
+        .box5 {
+            width: 100px;
+            height: 100px;
+            animation-delay: 0.8s;
+        }
+
+        
+
+        
+        @keyframes rint1 {
+            from {
+               transform: scale(0);
+               opacity: 1;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="loading">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+            <div class="box5"></div>
+        </div>
+    </div>
+</body>
+</html>
