@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolldown</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            margin: 100px 100px;
+            width: 300px;
+            height: 500px;
+            background-color: #999;
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            margin: 0 auto;
+            width: 30px;
+            height: 60px;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-name: rint3;
+            animation-delay: 2.5s;
+            animation-iteration-count: infinite;
+        }
+
+        .scroll {
+            width: 30px;
+            height: 60px;
+            border: white 2px solid;
+            border-radius: 15px;
+            box-sizing: border-box;
+            animation-name: rint1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        .down {
+            margin: 0 auto;
+            margin-top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            animation-name: rint2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rint1 {
+            from {
+                transform: translateY(0);
+            }
+            80%{
+                transform: translateY(30px);
+                opacity: 1;
+                
+            }
+            to {
+                transform: translateY(30px);
+                opacity: 0;
+                
+            }
+        }
+
+        @keyframes rint2 {
+            from {
+                transform: translateY(0);
+            }
+            
+            80%{
+                transform: translateY(40px);
+                
+            }
+            to {
+                transform: translateY(40px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box">
+            <div class="scroll">
+                <div class="down"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
