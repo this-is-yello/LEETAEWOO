@@ -23,10 +23,12 @@ li {
     text-align: center;
 }
 
-
+li>a {
+    color: crimson;
+    font-weight: bold;
+}
 
 li>a:hover {
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -35,9 +37,8 @@ section {
     width: 100%;
 }
 h1 {
-    margin: ;
     width: 200px;
-    height: 100px;
+    height: 60px;
 }
 figure {
     width: 60%;
