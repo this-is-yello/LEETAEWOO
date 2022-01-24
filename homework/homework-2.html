@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: relative;
+            margin: 20px;
+            width: 800px;
+            height: 150px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        div>p {
+            position: absolute;
+            width: 800px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+        }
+        
+        .hello {
+            background: linear-gradient(to right,#07553B, #CED46A, #ADEFD1);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: ani 3s ease-in-out infinite;
+            background-size: 200% auto;
+        }
+
+        @keyframes ani {
+            to {
+                background-position: 200%;
+            }
+    </style>
+</head>
+
+
+<body>
+    <div>
+        <p class="hello">안녕하세요. 저는 이태우입니다.</p>
+    </div>
+</body>
+</html>
