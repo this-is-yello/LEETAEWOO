@@ -30,17 +30,20 @@
         }
         
         .hello {
-            background: linear-gradient(to right,#07553B, #CED46A, #ADEFD1);
+            background: linear-gradient(to right,#07553B, #CED46A, #ADEFD1, #CED46A, #07553B);
             -webkit-background-clip: text;
             color: transparent;
-            animation: ani 3s ease-in-out infinite;
+            animation-name: rint;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
             background-size: 200% auto;
         }
 
-        @keyframes ani {
+        @keyframes rint {
             to {
                 background-position: 200%;
             }
+        }
     </style>
 </head>
 
