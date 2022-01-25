@@ -10,11 +10,11 @@
         * {
             margin: 0;
             padding: 0;
-            list-style: none;
+            list-style: ;
         }
         body {
             width: 1000px;
-            height: 1000px;
+            height: 1050px;
         }
 /* ---------------- header_top --------------------- */
         header {
@@ -95,7 +95,7 @@
             margin: 10px 10px;
             font-size: 12px;
         }
-        .box_all>.box3 {
+        #box_all>.box3 {
             float:left;
             width: 250px;
             height: 250px;
@@ -132,6 +132,41 @@
             margin-left: 500px;
             background-color: darkseagreen;
             position: absolute;
+        }
+
+        footer {
+            width: 1000px;
+            height: 50px;
+            float: left;
+        }
+        .f_menu {
+            float: left;
+            width: 750px;
+            height: 50px;
+            line-height: 50px;
+            background-color: gray;
+        }
+
+        .f_menu>li {
+            display: inline-block;
+            margin-left: 10px;
+            color: white;
+            font-size: 15px;
+        }
+
+        .company {
+            float: left;
+            width: 250px;
+            height: 50px;
+            background-color: aquamarine;
+        }
+        select>option {
+            float: left;
+            width: 200px;
+            height: 30px;
+            margin-left: 25px;
+            margin-top: 10px;
+            background-color: white;
         }
     </style>
 </head>
@@ -197,12 +232,13 @@
             <li><a href="#">고객센터</a></li>
             <li><a href="#">입찰공고</a></li>
         </ul>
-
-        <div id="select">
-            <option value="option1">계열사 사이트1</option>
-            <option value="option2">계열사 사이트2</option>
-            <option value="option3">계열사 사이트3</option>
-            <option value="option4">계열사 사이트4</option>
+        <div class="company">
+            <select>
+                <option value="option1">계열사 사이트1</option>
+                <option value="option2">계열사 사이트2</option>
+                <option value="option3">계열사 사이트3</option>
+                <option value="option4">계열사 사이트4</option>
+            </select>
         </div>
     </section>
 </body>
