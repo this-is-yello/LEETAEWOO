@@ -1,67 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* -------------------- header -------------------- */
 header {
-	margin: 0 auto;
-	width: 100%;
-	height: 120px;
+  float: left;
+  width: 100%;
 }
-header>ul {
-	margin: 0 auto;
-	width: 1200px;
+header > .navbar {
+  margin: 0 auto;
+  width: 1500px;
+  height: 120px;
 }
-header>.navbar>li {
-	display: block;
-    float: left;
-	margin-top: 20px;
-	height: 100px;
-	line-height: 100px;
-	text-align: center;
+header > ul > .menu {
+  float: left;
+  margin-top: 20px;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 18px;
 }
-header>.navbar>.menu {
-	width: 150px;
+header > ul > li > h1 {
+  float: left;
+  margin-top: 20px;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
 }
 
-.logo {
-    width: 300px;
+header > ul > .menu:hover {
+  color: coral;
+  font-weight: bold;
+  text-decoration: underline 2px;
+  cursor: pointer;
 }
 
+/* -------------------- section -------------------- */
 section {
-    width: 100%;
+  float: left;
+  width: 100%;
+}
+section > .banner1 {
+  position: relative;
+  height: 480px;
+}
+section > .banner1 > img {
+}
+section > .banner1 > .b-box {
+  position: absolute;
+  width: 500px;
+  height: 250px;
+  background-color: antiquewhite;
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.b-box > .title {
+  margin-top: 10px;
+  width: 500px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 15px;
+}
+.b-box > h1 {
+  width: 500px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+}
+.b-box > .sub {
+  width: 500px;
+  text-align: center;
+}
+.b-box > .button {
+  margin-top: 15px;
+  text-align: center;
+}
+.b-box > .button > button {
+  width: 150px;
+  height: 50px;
+}
+.b-box > .button > .btn1 {
+  background-color: white;
+  border: none;
+  font-size: 18px;
+}
+.b-box > .button > .btn2 {
+  background-color: sandybrown;
+  color: white;
+  border: none;
+  font-size: 18px;
 }
 
-section>.banner1 {
-    position: relative;
+section > .banner2 {
+  float: left;
+  width: 100%;
+  height: 430px;
+}
+section > .banner2 > .b2-top {
+  margin: 0 auto;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+}
+section > .banner2 > .b2-top > p {
+  font-size: 14px;
+}
+section > .banner2 > .b2-menu {
+  margin: 0 auto;
+  width: 1600px;
+}
+section > .banner2 > .b2-menu > .b2-sub {
+  margin: 0 auto;
+  float: left;
+  padding-top: 50px;
+  width: 380px;
+  height: 250px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+section > .banner2 > .b2-menu > .b2-sub > .line {
+  margin: 0 auto;
+  width: 300px;
+  border: 2px black dashed;
+  margin-top: 70px;
+}
+section > .banner2 > .b2-menu > .b2-sub:hover {
+  border: coral 3px solid;
+  cursor: pointer;
 }
 
-section>.banner1>img {
-    width: 100%;
+/* --------------------- footer --------------------- */
+footer {
+  float: left;
+  width: 100%;
+  height: 304px;
+  background-color: #ececec;
 }
-section>.banner1>.b-box {
-    position: absolute;
-    width: 500px;
-    height: 250px;
-    background-color: teal;
+footer > .foot {
+  margin: 0 auto;
+  width: 814px;
+  height: 296px;
 }
-section>.banner1>.b-box>.title {
-    width: 500px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 15px;
-    text-align: center;
+footer > .foot > .f-box {
+  float: left;
+  margin-top: 100px;
+  width: 500px;
+  height: 120px;
 }
-section>.banner1>.b-box>h1 {
-    width: 500px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
+footer > .f-box > .foot > h1 {
+  float: left;
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
 }
-section>.banner1>.b-box>.sub {
-    height: 20px;
-    line-height: 20px;
-    font-size: 13px;
-    text-align: center;
-}
-section>.banner1>.b-box>button {
-    width: 150px;
-    height: 50px;
+footer > .foot > .f-box > figure {
+  float: left;
+  width: 314px;
+  height: 304px;
 }
