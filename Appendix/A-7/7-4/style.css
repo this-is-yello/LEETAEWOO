@@ -1,0 +1,67 @@
+header {
+	margin: 0 auto;
+	width: 100%;
+	height: 120px;
+}
+header>ul {
+	margin: 0 auto;
+	width: 1200px;
+}
+header>.navbar>li {
+	display: block;
+    float: left;
+	margin-top: 20px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+header>.navbar>.menu {
+	width: 150px;
+}
+
+.logo {
+    width: 300px;
+}
+
+section {
+    width: 100%;
+}
+
+section>.banner1 {
+    position: relative;
+}
+
+section>.banner1>img {
+    width: 100%;
+}
+section>.banner1>.b-box {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    background-color: teal;
+}
+section>.banner1>.b-box>.title {
+    width: 500px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    text-align: center;
+}
+section>.banner1>.b-box>h1 {
+    width: 500px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+section>.banner1>.b-box>.sub {
+    height: 20px;
+    line-height: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+section>.banner1>.b-box>button {
+    width: 150px;
+    height: 50px;
+}
