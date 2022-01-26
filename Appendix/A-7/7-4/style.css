@@ -97,6 +97,9 @@ section > .banner1 > .b-box {
   border: none;
   font-size: 18px;
 }
+.b-box > .button > button:hover {
+  font-weight: bold;
+}
 
 section > .banner2 {
   float: left;
