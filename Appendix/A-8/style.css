@@ -1,0 +1,46 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #333;
+}
+body {
+    display: flex;
+    width: 1400px;
+}
+
+aside {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+}
+aside>.logo {
+    font-family: "Black Han Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    font-size: 30px;
+}
+aside>.nav {
+    font-family: "Do Hyeon", sans-serif;
+    width: 200px;
+}
+aside>.nav>.menu {
+    width: 190px;
+    margin-left: 10px;
+}
+aside>.nav>.menu>.s-menu {
+    width: 190px;
+    height: 40px;
+    line-height: 40px;
+}
