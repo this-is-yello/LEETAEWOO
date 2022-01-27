@@ -49,6 +49,8 @@ section > .banner1 {
   height: 480px;
 }
 section > .banner1 > img {
+  width: 100%;
+  height: 100%;
 }
 section > .banner1 > .b-box {
   position: absolute;
