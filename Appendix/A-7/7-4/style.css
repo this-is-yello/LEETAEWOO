@@ -117,7 +117,7 @@ section > .banner2 > .b2-top > p {
 }
 section > .banner2 > .b2-menu {
   margin: 0 auto;
-  width: 1600px;
+  width: 1520px;
 }
 section > .banner2 > .b2-menu > .b2-sub {
   margin: 0 auto;
@@ -127,6 +127,8 @@ section > .banner2 > .b2-menu > .b2-sub {
   height: 250px;
   text-align: center;
   margin-bottom: 30px;
+  border: 3px solid #00000000;
+  box-sizing: border-box;
 }
 section > .banner2 > .b2-menu > .b2-sub > .line {
   margin: 0 auto;
@@ -137,6 +139,7 @@ section > .banner2 > .b2-menu > .b2-sub > .line {
 section > .banner2 > .b2-menu > .b2-sub:hover {
   border: coral 3px solid;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 /* --------------------- footer --------------------- */
