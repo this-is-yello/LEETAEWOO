@@ -12,14 +12,19 @@ html {
 }
 body {
     display: flex;
-    width: 1400px;
+    flex-direction: ;
+}
+#wrap {
+    display: flex;
+    flex-direction: row;
+    width: 1600px;
 }
 
 aside {
     position: fixed;
     width: 200px;
     height: 100%;
-    background-color: white;
+    background-color: black;
 }
 aside>.logo {
     font-family: "Black Han Sans", sans-serif;
@@ -29,18 +34,103 @@ aside>.logo {
     width: 200px;
     height: 120px;
     text-align: center;
-    font-size: 30px;
+    font-size: 32px;
+    color: white;
 }
 aside>.nav {
     font-family: "Do Hyeon", sans-serif;
     width: 200px;
 }
-aside>.nav>.menu {
+aside>.nav>ul {
     width: 190px;
     margin-left: 10px;
+    font-size: 18px;
+    color: white;
 }
 aside>.nav>.menu>.s-menu {
     width: 190px;
     height: 40px;
     line-height: 40px;
+    font-size: 14px;
+    color: #999;
+}
+aside>.nav>.menu>li>a>span {
+    font-size: 14px;
+    color: lime;
+    margin-left: 8px;
+}
+aside>.search {
+    display: block;
+    float: left;
+    width: 160px;
+    border: darkgray 1px solid;
+    color: white;
+    margin-left: 10px;
+}
+aside>.search>input {
+    width: 100px;
+    height: 30px;
+    background-color: gray;
+    box-sizing: border-box;
+}
+aside>.search>button {
+    width: 60px;
+    height: 30px;
+    background-color: black;
+    color: gray;
+}
+aside>.search>input:focus {
+    background-color: green;
+    outline: green;
+}
+
+
+section {
+    width: 1400px;
+    margin-left: 200px;
+    background-color: darkgreen;
+}
+section>.banner {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    height: 500px;
+}
+section>.banner>img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 399px;
+}
+section>.banner>.play {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    font-size: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+section>.contents {
+    margin: 0 auto;
+    width: 1072px;
+    height: 1900px;
+}
+section>.contents>img {
+    display: block;
+    float: left;
+    margin-right: 24px;
+    margin-bottom: 24px;
+}
+section>.contents>img:nth-child(4n) {
+    margin-right: 0;
 }
