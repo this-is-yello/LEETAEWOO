@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>socar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body {
+            width: 100%;
+        }
+
+        /* ------------------- header -------------------- */
+
+        header {
+            width: 100%;
+            height: 70px;
+            background-color: aquamarine;
+        }
+        header>.logo {
+            display: block;
+            float: left;
+            width: 200px;
+            height: 50px;
+        }
+        header>.logo>img {
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        header>.menu {
+            width: 50px;
+            height: 20px;
+            display: block;
+            float: right;
+            border-top: 5px white solid;
+            border-bottom: 5px white solid;
+            margin-top: 20px;
+            margin-right: 15px;
+        }
+        
+        /* ------------------- banner -------------------- */
+
+        #banner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        #banner>img {
+            
+        }
+        #banner>h1 {
+            position: absolute;
+            width: 600px;
+            top: 400px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 80px;
+            text-align: center;
+        }
+
+        /* ------------------- section -------------------- */
+
+        section {
+            width: 100%;
+        }
+        section>.content1 {
+            margin: 0 auto;
+            width: 900px;
+        }
+        section>.content1>h2 {
+            width: 300px;
+            height: 80px;
+            line-height: 80px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo-w.svg" alt="logo">
+        </div>
+
+        <div class="menu"></div>
+    </header>
+
+
+    <div id="banner">
+        <img src="images/main_visual_fullscreen.jpg" alt="banner">
+
+        <h1>차가 필요한<br>모든순간, 쏘카</h1>
+    </banner>
+
+
+    <section>
+        <div class="content1">
+            <h2>24시간 언제나</h2>
+            <p>한밤중이나 주말에도 스마트폰으로<br>
+               시간에 구애받지 않고<br>
+               쏘카와 함께 이동하세요.</p>
+            <img src="images/usp_a.jpg" alt="24Hours">
+        </div>
+
+        <div class="content2">
+            <h2>원하는 곳에서</h2>
+            <p>내 주변 3분 거리 쏘카존에서<br>
+               혹은 내가 있는 곳으로 쏘카를 불러<br>
+               어디서나 편하게 출발하세요</p>
+            <img src="images/usp_b.jpg" alt="Everywhere">
+        </div>
+
+        <div class="content3">
+            <h2>필요한 시간만큼</h2>
+            <p>간단한 장보기부터 주말여행까지<br>
+               10분 단위로 원하는 만큼만 이용하세요.</p>
+            <img src="images/usp_c.jpg" alt="Everytime">
+        </div>
+
+        <div class="content4">
+            <h2>다양한 차종을</h2>
+            <p>연인과의 드라이브부터 가족 캠핑까지<br>
+               상황에 맞게 50여 종의 차량을<br>
+               선택해서 이용하세요.</p>
+            <img src="images/usp_d.jpg" alt="various">
+        </div>
+
+        <div class="content5">
+            <p class="text">
+                함께하고 있습니다.<br>
+                지금 바로 쏘카 드라이브를<br>
+                시작하세요.
+                7,586,684명의 회원이 쏘카와<br>
+            </p>
+
+            <div class="blue-box"></div>
+        </div>
+    </section>
+
+
+    <footer>
+        <ul class="icons">
+            <li><a href="#"><img src="images/i-instagram.svg" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images/i-facebook.svg" alt="Facebook"></a></li>
+            <li><a href="#"><img src="images/i-youtube.svg" alt="Youtube"></a></li>
+            <li><a href="#"><img src="images/i-blog.svg" alt="Blog"></a></li>
+        </ul>
+
+        <ul class="f-menu">
+            <li>회사소개</li>
+            <li>인재채용</li>
+            <li>나눔카</li>
+            <li>이용약관</li>
+            <li class="bold">개인정보처리방침</li>
+            <li class="bold">위치정보 이용약관</li>
+            <li class="bold">차량손해면책제도</li>
+            <li>고객센터</li>
+            <li>제휴문의</li>
+            <li>공고</li>
+        </ul>
+
+        <div class="copyright1">
+            <p>주소. 제주특별자치도 제주시 연미길 42 (오라삼동)</p>
+            <p>전화. 1661-3315</p>
+            <p>팩스. 02-6969-9333</p>
+        </div>
+        <div class="copyright2">
+            <p>(주)쏘카 통신판매업<span>사업자정보확인</span></p>
+            <p>신고: 제 2019-제주오라-3호, 사업자등록번호: 616-81-90529, 대표자: 박재욱</p>
+            <p>© 2019 SOCAR All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+    <div id="download">
+        <div class="d-box">
+            쏘카 앱 다운로드 ↓
+        </div>
+
+        <div class="i-box">
+            <img src="images/i-appicon.svg" alt="app">
+        </div>
+    </div>
+</body>
+</html>
