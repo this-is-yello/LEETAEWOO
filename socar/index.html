@@ -19,6 +19,7 @@
         /* ------------------- header -------------------- */
 
         header {
+            top: 0;
             width: 100%;
             height: 70px;
             background-color: #00b8ff;
@@ -49,17 +50,19 @@
         #banner {
             position: relative;
             width: 100%;
-            height: 100%;
         }
         #banner>img {
-            
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            min-width: 100%;
         }
         #banner>h1 {
             position: absolute;
             width: 600px;
-            top: 400px;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
             color: white;
             font-size: 80px;
             text-align: center;
@@ -153,6 +156,7 @@
         }
         section>.content5 {
             position: relative;
+            overflow: hidden;
             margin-top: 200px;
             width: 100%;
             height: 500px;
@@ -171,11 +175,11 @@
             position: absolute;
             top: 0px;
             right: 0;
-            width: 400px;
+            width: 700px;
             height: 500px;
             background-color: #00b8ff;
-            /* transform: skewX(-30deg) translate3d(30%, 0, 0);
-            transform-origin: bottom left; */
+            transform: skewX(-30deg) translate3d(30%, 0, 0);
+            transform-origin: bottom left;
         }
         
         /* ------------------- footer -------------------- */
@@ -253,6 +257,26 @@
         }
         #download>.d-box {
             float: right;
+            width: 620px;
+            height: 100px;
+            background-color: #00b8ff;
+            transform: skewX(-30deg) translate3d(30%, 0, 0);
+            transform-origin: bottom left;
+        }
+        #download>.i-box {
+            position: absolute;
+            left: 40px;
+            margin-top: 10px;
+            width: 80px;
+        }
+        #download>.i-box>img {
+            border-radius: 20px;
+            box-shadow: 3px 3px 3px 3px rgba(153, 153, 153, 0.5);
+        }
+        #download>p {
+            position: absolute;
+            float: right;
+            left: 100px;
             width: 400px;
             height: 100px;
             line-height: 100px;
@@ -260,13 +284,6 @@
             font-size: 24px;
             font-weight: bold;
             color: white;
-            background-color: #00b8ff;
-        }
-        #download>.i-box {
-            margin-top: 10px;
-            width: 80px;
-            line-height: 80px;
-            box-shadow: 10px 5px 5px
         }
     </style>
 </head>
@@ -284,7 +301,7 @@
         <img src="images/main_visual_fullscreen.jpg" alt="banner">
 
         <h1>차가 필요한<br>모든순간, 쏘카</h1>
-    </banner>
+    </div>
 
 
     <section>
@@ -369,9 +386,8 @@
 
     
     <div id="download">
-        <div class="d-box">
-            쏘카 앱 다운로드 ↓
-        </div>
+        <div class="d-box"></div>
+        <p>쏘카 앱 다운로드 ↓</p>
 
         <div class="i-box">
             <img src="images/i-appicon.svg" alt="app">
