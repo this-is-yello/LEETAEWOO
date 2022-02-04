@@ -18,31 +18,68 @@
 
         /* ------------------- header -------------------- */
 
-        header {
+        #banner>header {
+            position: absolute;
             top: 0;
             width: 100%;
             height: 70px;
-            background-color: #00b8ff;
         }
-        header>.logo {
+        #banner>header>.logo {
             display: block;
             float: left;
             width: 200px;
             height: 50px;
         }
-        header>.logo>img {
+        #banner>header>.logo>img {
             margin-top: 15px;
             margin-left: 15px;
         }
-        header>.menu {
-            width: 50px;
-            height: 20px;
-            display: block;
+        
+        #berger-click {
+            opacity: 0;
+        }
+        .hamberger {
             float: right;
-            border-top: 5px white solid;
-            border-bottom: 5px white solid;
-            margin-top: 20px;
-            margin-right: 15px;
+            right: 12px;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hamberger::after, .hamberger::before {
+            content: '';
+            width: 25px;
+            height: 4px;
+            display: block;
+            background-color: white;
+            transition: 0.2s;
+            position: absolute;
+            transform-origin: top left;
+        }
+
+        .hamberger::after {
+            top : 12px;
+            left: 2px;
+        }
+
+        .hamberger::before {
+            bottom: 12px;
+            right: 2px;
+        }
+
+        #berger-click:checked + label > .hamberger::after {
+            background-color: #00b8ff;
+            top : 50%;
+            left : 50%;
+            transform: rotate(45deg) translate(-50%,-50%);
+        }
+
+        #berger-click:checked + label > .hamberger::before{
+            background-color: #00b8ff;
+            top: 50%;
+            left: 50%;
+            transform: rotate(-45deg) translate(-50%,-50%);
         }
         
         /* ------------------- banner -------------------- */
@@ -288,16 +325,21 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo-w.svg" alt="logo">
-        </div>
-
-        <div class="menu"></div>
-    </header>
+    
 
 
     <div id="banner">
+        <header>
+            <div class="logo">
+                <img src="images/logo-w.svg" alt="logo">
+            </div>
+    
+            <input type="checkbox" name="hamberger" id="berger-click" />
+            <label for="berger-click">
+                <div class="hamberger"></div>
+            </label>
+        </header>
+
         <img src="images/main_visual_fullscreen.jpg" alt="banner">
 
         <h1>차가 필요한<br>모든순간, 쏘카</h1>
