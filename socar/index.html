@@ -45,6 +45,7 @@
             height: 40px;
             position: relative;
             cursor: pointer;
+            z-index: 3;
         }
 
         .hamberger::after, .hamberger::before {
@@ -81,6 +82,53 @@
             left: 50%;
             transform: rotate(-45deg) translate(-50%,-50%);
         }
+
+        /* ------------------- menu -------------------- */
+
+        .menu {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 25%;
+            height: 100%;
+            background-color: #28323c;
+            z-index: 2;
+            transform: translateX(100%);
+            transition: 0.5s;
+        }
+        .menu>ul {
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #555;
+            width: 80%;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        .menu>ul>li {
+            height: 50px;
+            line-height: 50px;
+        }
+        
+        #berger-click:checked ~ .menu {
+            transform: translateX(0);
+        }
+         .focus-out {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            opacity: 0.8;
+            z-index: 1;
+        }
+        #berger-click:checked ~ .focus-out {
+            display: block;
+        } */
+        
         
         /* ------------------- banner -------------------- */
 
@@ -338,6 +386,25 @@
             <label for="berger-click">
                 <div class="hamberger"></div>
             </label>
+
+            <nav class="menu">
+                <ul>
+                    <li>이용 안내</li>
+                    <li>요금 안내</li>
+                    <li>혜택 안내</li>
+                    <li>쏘카존 개설신청</li>
+                </ul>
+                <ul>
+                    <li>쏘카의 서비스</li>
+                    <li>쏘카 비즈니스</li>
+                    <li>쏘카 플랜</li>
+                </ul>
+                <ul>
+                    <li>회사소개</li>
+                    <li>IR</li>
+                </ul>
+            </nav>
+            <div class="focus-out"></div>
         </header>
 
         <img src="images/main_visual_fullscreen.jpg" alt="banner">
