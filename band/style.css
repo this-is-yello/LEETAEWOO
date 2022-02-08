@@ -1,54 +1,174 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 #top {
-    width: 100%;
-    background-color: #f6f8fa;
+  width: 100%;
+  height: 840px;
+  background-color: #f6f8fa;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
 }
-header>a>.logo {
-    background: url('images/spr_intro.png') no-repeat 0 -98px;
-	width: 78px;
-	height: 29px;
-    margin: 10px 10px;
+header > a > .logo {
+  background: url("images/spr_intro.png") no-repeat 0 -98px;
+  width: 78px;
+  height: 29px;
+  margin: 10px 10px;
 }
-header>a>.logo>span {
-    display: none;
+header > a > .logo > span {
+  display: none;
 }
-header>.sign {
-    width: 260px;
-    height: 50px;
-    line-height: 50px;
+header > .sign {
+  width: 260px;
+  height: 50px;
+  line-height: 50px;
 }
 #language {
-    width: 80px;
-    border: none;
-    background-color: rgba(0, 0, 0 ,0);
+  width: 80px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .sign-up {
-    width: 80px;
-    border: none;
-    background-color: rgba(0, 0, 0 ,0);
+  width: 80px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 .sign-in {
-    width: 80px;
-    height: 30px;
-    border: none;
-    color: white;
-    background-color: #21c531;
+  width: 80px;
+  height: 30px;
+  border: none;
+  color: white;
+  background-color: #21c531;
 }
 
-#top>.banner {
-    margin: 0 auto;
-    width: 1600px;
+#top > .banner {
+  margin: 0 auto;
+  padding-top: 80px;
+  width: 1100px;
+  height: 700px;
+}
+#top > .banner > .phone {
+  float: left;
+  margin-left: 40px;
+  margin-right: 60px;
+  width: 540px;
+  height: 695px;
+}
+#top > .banner > .phone > img {
+  float: left;
+  width: 540px;
+  height: 695px;
+}
+#top > .banner > .join {
+  float: left;
+  padding-top: 20px;
+  width: 410px;
+  height: 570px;
+}
+#top > .banner > .join > .text {
+  width: 410px;
+}
+#top > .banner > .join > .text > h2 {
+  height: 110px;
+  line-height: 55px;
+  font-size: 45px;
+  font-weight: normal;
+  color: #222222;
+}
+#top > .banner > .join > .text > p {
+  margin-bottom: 10px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 17px;
+}
+#top > .banner > .join > form {
+  /* box-shadow: 3px 3px rgba(153, 153, 153, 0.5); */
+}
+#top > .banner > .join > form > input {
+  width: 340px;
+  height: 46px;
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+}
+#top > .banner > .join > form > .birth {
+  border-bottom: none;
+}
+#top > .banner > .join > form > button {
+  margin-top: 30px;
+  width: 340px;
+  height: 46px;
+  border: none;
+  color: white;
+  font-size: 17px;
+  background-color: #21c531;
+}
+#top > .banner > .join > .buttons {
+  margin-top: 30px;
+  width: 340px;
+  height: 40px;
+}
+#top > .banner > .join > .buttons > .facebook {
+  float: left;
+  margin-right: 20px;
+  width: 160px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  box-sizing: border-box;
+}
+#top > .banner > .join > .buttons > .facebook > .face-logo {
+  float: left;
+  margin-left: 8px;
+  margin-top: 11px;
+  background: url("images/spr_intro.png") no-repeat -3px -131px;
+  width: 17px;
+  height: 18px;
+}
+#top > .banner > .join > .buttons > .facebook > p {
+  float: left;
+  margin-left: 10px;
+  height: 38px;
+  line-height: 38px;
+}
+#top > .banner > .join > .buttons > .naver {
+  float: left;
+  width: 160px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  box-sizing: border-box;
+}
+#top > .banner > .join > .buttons > .naver > .naver-logo {
+  float: left;
+  margin-left: 8px;
+  margin-top: 11px;
+  background: url("images/spr_intro.png") no-repeat -186px -100px;
+  width: 19px;
+  height: 18px;
+}
+#top > .banner > .join > .buttons > .naver > p {
+  float: left;
+  margin-left: 20px;
+  height: 38px;
+  line-height: 38px;
+}
+#top > .banner > .join > p {
+  margin-top: 30px;
+  width: 410px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+}
+#top > .banner > .join > p > a {
+  font-weight: bold;
+  color: #21c531;
+  text-decoration: underline;
 }
