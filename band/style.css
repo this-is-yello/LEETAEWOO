@@ -6,7 +6,7 @@
 
 #top {
     width: 100%;
-    background-color: #f7f8fa;
+    background-color: #f6f8fa;
 }
 
 header {
@@ -30,20 +30,25 @@ header>.sign {
     line-height: 50px;
 }
 #language {
-    width: 70px;
+    width: 80px;
     border: none;
     background-color: rgba(0, 0, 0 ,0);
 }
 
 .sign-up {
-    width: 70px;
+    width: 80px;
     border: none;
     background-color: rgba(0, 0, 0 ,0);
 }
 .sign-in {
-    width: 100px;
+    width: 80px;
     height: 30px;
     border: none;
     color: white;
     background-color: #21c531;
+}
+
+#top>.banner {
+    margin: 0 auto;
+    width: 1600px;
 }
