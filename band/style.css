@@ -4,3 +4,46 @@
     list-style: none;
 }
 
+#top {
+    width: 100%;
+    background-color: #f7f8fa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+header>a>.logo {
+    background: url('images/spr_intro.png') no-repeat 0 -98px;
+	width: 78px;
+	height: 29px;
+    margin: 10px 10px;
+}
+header>a>.logo>span {
+    display: none;
+}
+header>.sign {
+    width: 260px;
+    height: 50px;
+    line-height: 50px;
+}
+#language {
+    width: 70px;
+    border: none;
+    background-color: rgba(0, 0, 0 ,0);
+}
+
+.sign-up {
+    width: 70px;
+    border: none;
+    background-color: rgba(0, 0, 0 ,0);
+}
+.sign-in {
+    width: 100px;
+    height: 30px;
+    border: none;
+    color: white;
+    background-color: #21c531;
+}
