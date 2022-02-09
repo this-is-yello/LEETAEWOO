@@ -23,7 +23,8 @@ header > a > .logo {
   margin: 10px 10px;
 }
 header > a > .logo > span {
-  display: none;
+  display: ;
+
 }
 header > .sign {
   width: 260px;
@@ -50,25 +51,23 @@ header > .sign {
 }
 
 #top > .banner {
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   padding-top: 50px;
-  width: 1100px;
+  width: 100%;
   height: 600px;
 }
 #top > .banner > .phone {
-  float: left;
   margin-left: 40px;
   margin-right: 60px;
   width: 540px;
   height: 695px;
 }
 #top > .banner > .phone > img {
-  float: left;
   width: 540px;
   height: 695px;
 }
 #top > .banner > .join {
-  float: left;
   padding-top: 20px;
   width: 410px;
   height: 570px;
@@ -77,28 +76,27 @@ header > .sign {
   width: 410px;
 }
 #top > .banner > .join > .text > h2 {
-  height: 110px;
-  line-height: 55px;
   font-size: 45px;
   font-weight: normal;
   color: #222222;
 }
 #top > .banner > .join > .text > p {
-  margin-bottom: 10px;
-  height: 40px;
-  line-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   font-size: 17px;
 }
-#top > .banner > .join > form {
-  /* box-shadow: 3px 3px rgba(153, 153, 153, 0.5); */
+#top > .banner > .join > form>.input {
+  width: 340px;
+  box-shadow: 3px 3px rgba(153, 153, 153, 0.5);
 }
-#top > .banner > .join > form > input {
+#top > .banner > .join > form > .input>input {
   width: 340px;
   height: 46px;
   border: none;
   border-bottom: 1px solid #e7e7e7;
 }
-#top > .banner > .join > form > .birth {
+
+#top > .banner > .join > form>.input:last-child {
   border-bottom: none;
 }
 #top > .banner > .join > form > button {
@@ -171,4 +169,38 @@ header > .sign {
   font-weight: bold;
   color: #21c531;
   text-decoration: underline;
+}
+section>.sec1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 540px;
+  background-image: url(images/bg_intro.jpg);
+}
+section>.sec1>.text {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  height: 540px;
+  align-items: center;
+  justify-content: center;
+}
+section>.sec1>.text>h2 {
+  width: 800px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  color: white;
+}
+section>.sec1>.text>p {
+  width: 800px;
+  height: 50px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: normal;
+  color: white;
 }
