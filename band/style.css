@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  text-decoration: none;
 }
 
 #top {
@@ -23,8 +24,11 @@ header > a > .logo {
   margin: 10px 10px;
 }
 header > a > .logo > span {
-  display: ;
-
+  width: 1px;
+  height: 1px;
+  clip: rect(1px 1px 1px 1px);
+  overflow: hidden;
+  clip-path: inset(50%);
 }
 header > .sign {
   width: 260px;
@@ -85,18 +89,18 @@ header > .sign {
   margin-bottom: 20px;
   font-size: 17px;
 }
-#top > .banner > .join > form>.input {
+#top > .banner > .join > form > .input {
   width: 340px;
   box-shadow: 3px 3px rgba(153, 153, 153, 0.5);
 }
-#top > .banner > .join > form > .input>input {
+#top > .banner > .join > form > .input > input {
   width: 340px;
   height: 46px;
   border: none;
   border-bottom: 1px solid #e7e7e7;
 }
 
-#top > .banner > .join > form>.input:last-child {
+#top > .banner > .join > form > .input:last-child {
   border-bottom: none;
 }
 #top > .banner > .join > form > button {
@@ -170,7 +174,13 @@ header > .sign {
   color: #21c531;
   text-decoration: underline;
 }
-section>.sec1 {
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+section > .sec1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,7 +188,7 @@ section>.sec1 {
   height: 540px;
   background-image: url(images/bg_intro.jpg);
 }
-section>.sec1>.text {
+section > .sec1 > .text {
   display: flex;
   flex-direction: column;
   width: 800px;
@@ -186,7 +196,7 @@ section>.sec1>.text {
   align-items: center;
   justify-content: center;
 }
-section>.sec1>.text>h2 {
+section > .sec1 > .text > h2 {
   width: 800px;
   height: 80px;
   line-height: 80px;
@@ -195,7 +205,7 @@ section>.sec1>.text>h2 {
   font-weight: normal;
   color: white;
 }
-section>.sec1>.text>p {
+section > .sec1 > .text > p {
   width: 800px;
   height: 50px;
   line-height: 25px;
@@ -203,4 +213,219 @@ section>.sec1>.text>p {
   font-size: 15px;
   font-weight: normal;
   color: white;
+}
+
+.sec2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+  width: 1200px;
+  height: 350px;
+}
+.sec2 > .box1 {
+  width: 300px;
+  height: 270px;
+}
+.sec2 figure {
+  width: 300px;
+  height: 160px;
+}
+.box1 > figure > img {
+  width: 300px;
+  height: 160px;
+}
+.sec2 h3 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: normal;
+  font-size: 25px;
+  color: #444444;
+}
+.sec2 p {
+  font-size: 15px;
+  color: #222222;
+}
+.sec2 > .box2 {
+  width: 300px;
+  height: 270px;
+}
+.box2 > figure > img {
+  width: 300px;
+  height: 160px;
+}
+.sec2 > .box3 {
+  width: 300px;
+  height: 270px;
+}
+.box3 > figure > img {
+  width: 300px;
+  height: 160px;
+}
+.sec3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 900px;
+  background-color: #eef0f3;
+}
+.sec3 > .titlebar {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  height: 120px;
+  line-height: 120px;
+}
+.sec3 h2 {
+  font-weight: normal;
+  font-size: 25px;
+  color: #444444;
+}
+.sec3 a {
+  font-size: 15px;
+  color: #222222;
+}
+.sec3 > .contents {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;
+}
+.sec3 .con1-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.sec3 .con {
+  display: flex;
+  width: 500px;
+  height: 100px;
+}
+.sec3 .con figure {
+  width: 100px;
+  height: 100px;
+}
+.con img {
+  width: 100px;
+  height: 100px;
+}
+.con .text {
+  width: 380px;
+  margin-left: 10px;
+}
+.con .con-title a {
+  font-size: 16px;
+  font-weight: bold;
+}
+.con-title {
+  padding-bottom: 5px;
+}
+.con .con-sub a {
+  font-size: 13px;
+}
+.con .member a {
+  font-size: 12px;
+}
+.con .member {
+  padding-bottom: 5px;
+}
+.con .btn {
+  background-color: #fff;
+  width: 200px;
+  height: 23px;
+  line-height: 23px;
+  border: 1px solid #a3a3a3;
+  border-radius: 50px;
+  text-align: center;
+}
+.con .btn a {
+  font-size: 14px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 260px;
+}
+#foot1 {
+  display: flex;
+  width: 100%;
+  height: 130px;
+}
+.foot1-1 {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1200px;
+  height: 130px;
+}
+#foot1 .foot-left {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 130px;
+}
+.foot-left .app {
+  background: url("images/spr_intro.png") no-repeat -162px 0;
+  width: 70px;
+  height: 70px;
+}
+.foot-left .text {
+  margin-left: 15px;
+}
+.foot-left h3 {
+  font-size: 25px;
+  font-weight: normal;
+}
+.foot-left p {
+  font-size: 15px;
+}
+.foot-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+}
+.foot-right a:first-child {
+  background: url("images/spr_intro.png") no-repeat 0 0;
+  width: 160px;
+  height: 47px;
+}
+.foot-right a:last-child {
+  background: url("images/spr_intro.png") no-repeat 0 -49px;
+  width: 160px;
+  height: 47px;
+}
+#foot2 {
+  width: 100%;
+  height: 130px;
+  background-color: #2a3038;
+}
+
+#foot2 ul {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 1200px;
+  height: 50px;
+  line-height: 70px;
+}
+#foot2 li a {
+  margin: 6px;
+  color: #777777;
+}
+#foot2 li:nth-child(5) a {
+  font-weight: bold;
+  color: #b3b3b3;
+}
+#foot2 p {
+  margin: 0 auto;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  color: #b3b3b3;
 }
