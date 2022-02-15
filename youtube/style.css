@@ -1,19 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+}
+header figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 60px;
+}
+header figure img {
+  width: 120px;
+  height: 26.72px;
+}
+header .header-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+header .header-profile a {
+  width: 40px;
+  height: 40px;
+}
+header .header-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+header span {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px 1px 1px 1px);
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
 #player {
-    
+  margin-left: 2%;
+  margin-top: 2%;
+  width: 65%;
+  height: 65%;
 }
 
 .video {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding-top: 56.25%;
-    margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 56.25%;
+  margin: 0;
 }
 
 .video iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+#info {
+  margin-top: 1%;
+  margin-left: 2%;
+  width: 65%;
+}
+#info .hashtag {
+  display: flex;
+}
+#info .hashtag a {
+  margin-right: 5px;
+  font-size: 14px;
+  color: #065fd4;
+}
+#info h3 {
+  font-size: 22px;
+  font-weight: normal;
+}
+.view-icons {
+  margin-top: 1%;
+  padding-bottom: 1%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c6c6c6;
+}
+.view-icons .view {
+  color: #606060;
+}
+.view-icons .icons {
+  display: flex;
+}
+.view-icons .icons a {
+  color: black;
+  margin-left: 15px;
 }
