@@ -108,3 +108,11 @@ header span {
   color: black;
   margin-left: 15px;
 }
+
+.video-profile {
+  display: flex;
+  flex-direction: column;
+}
+.video-profile .profile{
+  display: flex;
+}
