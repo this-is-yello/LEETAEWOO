@@ -6,8 +6,13 @@
 }
 
 body {
-  background-color: #f9f9f9;
   width: 100%;
+  background-color: #f9f9f9;
+}
+#wrap {
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
 }
 
 header {
@@ -55,8 +60,8 @@ header span {
 #player {
   margin-left: 24px;
   margin-top: 24px;
-  width: 65%;
-  height: 65%;
+  width: 72%;
+  height: 72%;
 }
 
 .video {
@@ -77,7 +82,7 @@ header span {
 #info {
   margin-top: 1%;
   margin-left: 24px;
-  width: 65%;
+  width: 72%;
 }
 #info .hashtag {
   display: flex;
@@ -134,7 +139,7 @@ header span {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 578px;
+  width: 100%;
   height: 50px;
 }
 .video-profile .profile img {
@@ -165,34 +170,44 @@ header span {
   color: #606060;
 }
 
-
 #next-video {
-  
+  position: absolute;
+  width: 26%;
+  top: 0;
+  right: 0;
 }
 .next {
   display: flex;
-  width: 400px;
-  padding-top: 12px;
+  padding-top: 24px;
   padding-left: 24px;
+}
+.next:first-child {
+  padding-top: 0;
 }
 .next img {
   display: flex;
   align-items: center;
-  width: 160px;
+  width: 142px;
   margin-right: 8px;
 }
-.next-info p:first-child a{
+.next-info p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.next-info p:first-child a {
   font-size: 14px;
   font-weight: bold;
   color: black;
 }
-.next-info p:last-child a{
+.next-info p:last-child a {
   font-size: 13px;
   color: #606060;
 }
 #comment {
   margin-left: 24px;
-  width: 65%;
+  width: 72%;
 }
 
 .com-top {
@@ -221,3 +236,6 @@ header span {
   border-bottom: 1px solid #c6c6c6;
   background: none;
 }
+
+/* 1017px */
+/* 1772px */
