@@ -4,34 +4,36 @@
   text-decoration: none;
   list-style: none;
 }
-
 body {
   width: 100%;
   background-color: #f9f9f9;
-}
-#wrap {
-  margin: 0 auto;
-  position: relative;
-  width: 90%;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   width: 100%;
   height: 60px;
   background-color: white;
+}
+#wrap {
+  margin: 0 auto;
+  width: 88%;
+  position: relative;
 }
 header figure {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 160px;
+  padding-left: 16px;
+  width: 120px;
   height: 60px;
 }
 header figure img {
   width: 120px;
-  height: 26.72px;
 }
 header .header-profile {
   display: flex;
@@ -45,6 +47,9 @@ header .header-profile a {
   height: 40px;
 }
 header .header-profile img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -58,10 +63,9 @@ header span {
 }
 
 #player {
-  margin-left: 24px;
   margin-top: 24px;
-  width: 72%;
-  height: 72%;
+  width: 73%;
+  height: 73%;
 }
 
 .video {
@@ -80,9 +84,8 @@ header span {
   top: 0;
 }
 #info {
-  margin-top: 1%;
-  margin-left: 24px;
-  width: 72%;
+  margin-top: 12px;
+  width: 73%;
 }
 #info .hashtag {
   display: flex;
@@ -98,7 +101,7 @@ header span {
   padding-bottom: 8px;
 }
 .view-icons {
-  margin-top: 1%;
+  margin-top: 8px;
   padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
@@ -172,13 +175,13 @@ header span {
 
 #next-video {
   position: absolute;
-  width: 26%;
+  width: 27%;
   top: 0;
   right: 0;
 }
 .next {
   display: flex;
-  padding-top: 24px;
+  padding-top: 12px;
   padding-left: 24px;
 }
 .next:first-child {
@@ -187,26 +190,26 @@ header span {
 .next img {
   display: flex;
   align-items: center;
-  width: 142px;
+  width: 160px;
   margin-right: 8px;
 }
 .next-info p {
   display: -webkit-box;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
 .next-info p:first-child a {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   color: black;
 }
 .next-info p:last-child a {
-  font-size: 13px;
+  font-size: 12px;
   color: #606060;
 }
 #comment {
-  margin-left: 24px;
   width: 72%;
 }
 
@@ -227,6 +230,8 @@ header span {
   margin-right: 16px;
 }
 .input figure img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 .input input {
@@ -237,5 +242,55 @@ header span {
   background: none;
 }
 
+#comment .com {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#comment .com figure {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+}
+.com figure img {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.com .text p {
+  margin-bottom: 4px;
+}
+.com .text p a {
+  color: black;
+}
+span {
+  margin-left: 8px;
+  font-size: 13px;
+  color: #606060;
+}
+.com figure .text {
+  font-size: 15px;
+  color: black;
+  padding-left: 12px;
+}
+#comment .com .icons {
+  margin-left: 52px;
+  display: flex;
+}
+.com .icons a {
+  margin-right: 16px;
+  font-size: 14px;
+  color: black;
+}
+.com .more {
+  margin-top: 8px;
+}
+.com .more a {
+  margin-left: 52px;
+  font-size: 14px;
+  color: #065fd4;
+}
 /* 1017px */
 /* 1772px */
