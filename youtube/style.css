@@ -53,8 +53,8 @@ header span {
 }
 
 #player {
-  margin-left: 2%;
-  margin-top: 2%;
+  margin-left: 24px;
+  margin-top: 24px;
   width: 65%;
   height: 65%;
 }
@@ -76,7 +76,7 @@ header span {
 }
 #info {
   margin-top: 1%;
-  margin-left: 2%;
+  margin-left: 24px;
   width: 65%;
 }
 #info .hashtag {
@@ -90,10 +90,11 @@ header span {
 #info h3 {
   font-size: 22px;
   font-weight: normal;
+  padding-bottom: 8px;
 }
 .view-icons {
   margin-top: 1%;
-  padding-bottom: 1%;
+  padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #c6c6c6;
@@ -112,7 +113,111 @@ header span {
 .video-profile {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #c6c6c6;
+  padding-bottom: 12px;
 }
-.video-profile .profile{
+.video-profile .profile {
   display: flex;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 16px;
+}
+.video-profile .profile h4 {
+  color: black;
+  font-size: 15px;
+}
+.video-profile .profile p {
+  font-size: 13px;
+  color: #606060;
+}
+.video-profile .profile figure {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 578px;
+  height: 50px;
+}
+.video-profile .profile img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.video-profile .profile button {
+  width: 72px;
+  height: 40px;
+  border: none;
+  border-radius: 2px;
+  background-color: #c00;
+  color: white;
+}
+.video-profile .more {
+  margin-left: 58px;
+  font-size: 14px;
+}
+.video-profile .more p:first-child {
+  padding-bottom: 20px;
+}
+.video-profile .more p:nth-child(2) {
+  color: #065fd4;
+  padding-bottom: 12px;
+}
+.video-profile .more p:last-child {
+  font-size: 13px;
+  color: #606060;
+}
+
+
+#next-video {
+  
+}
+.next {
+  display: flex;
+  width: 400px;
+  padding-top: 12px;
+  padding-left: 24px;
+}
+.next img {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  margin-right: 8px;
+}
+.next-info p:first-child a{
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+}
+.next-info p:last-child a{
+  font-size: 13px;
+  color: #606060;
+}
+#comment {
+  margin-left: 24px;
+  width: 65%;
+}
+
+.com-top {
+  height: 80px;
+  line-height: 80px;
+  display: flex;
+}
+.com-top h3 {
+  padding-right: 50px;
+}
+#comment .input {
+  display: flex;
+}
+#comment figure {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+}
+.input figure img {
+  border-radius: 50%;
+}
+.input input {
+  width: 100%;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #c6c6c6;
+  background: none;
 }
