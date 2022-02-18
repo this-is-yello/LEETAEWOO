@@ -32,6 +32,9 @@ header {
   width: 80px;
   height: 60px;
 }
+.logo .h-menu:hover {
+  cursor: pointer;
+}
 #wrap {
   display: flex;
   flex-direction: column;
@@ -69,6 +72,9 @@ label .search {
   border-left: none;
   box-sizing: border-box;
 }
+label .search:hover {
+  cursor: pointer;
+}
 label .voice {
   width: 40px;
   height: 40px;
@@ -76,6 +82,9 @@ label .voice {
   background-color: #f8f8f8;
   border: none;
   border-radius: 50%;
+}
+label .voice:hover {
+  cursor: pointer;
 }
 
 header .header-profile {
@@ -255,16 +264,10 @@ header span {
 #next-video-1 {
   display: none;
   width: 100%;
-  top: 0;
-  right: 0;
 }
 .next-1 {
   display: flex;
-  padding-top: 12px;
-  padding-left: 24px;
-}
-.next-1:first-child {
-  padding-top: 0;
+  padding-top: 16px;
 }
 .next-1 img {
   display: flex;
@@ -370,6 +373,9 @@ span {
   margin-left: 52px;
   font-size: 14px;
   color: #065fd4;
+}
+.com .more a:hover {
+  text-decoration: underline;
 }
 /* 1017px */
 /* 1772px */
