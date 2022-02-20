@@ -165,7 +165,7 @@ header span {
   display: flex;
   align-items: center;
 }
-.view-icons .icons a{
+.view-icons .icons a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -308,12 +308,18 @@ header span {
   display: flex;
 }
 .com-top p {
+  padding-left: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .com-top h3 {
-  padding-right: 50px;
+  padding-right: 24px;
+}
+.com-top span {
+  font-size: 16px;
+  color: black;
+  margin-left: 8px;
 }
 #comment .input {
   display: flex;
@@ -395,7 +401,6 @@ span {
 }
 /* 1017px */
 /* 1772px */
-
 
 @media screen and (max-width: 1016px) {
   #next-video {
