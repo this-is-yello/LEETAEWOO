@@ -22,26 +22,42 @@ header {
   justify-content: space-around;
   width: 966px;
   height: 44px;
+  line-height: 44px;
 }
 .nav-bar ul .logo {
-  background-size: 14px 44px;
+  width: 14px;
+  height: 44px;
+  line-height: 44px;
+}
+.nav-bar ul .logo a {
+  display: block;
   background-repeat: no-repeat;
   background-image: url(images/header-icon.svg);
   background-position: center center;
   width: 14px;
+  height: 44px;
 }
 .nav-bar ul .search {
+  width: 14px;
+  height: 14px;
+  line-height: 44px;
+}
+.nav-bar ul .search a{
+  display: block;
   background: url(images/Search.svg) no-repeat 0 -15px;
   width: 14px;
   height: 14px;
+  line-height: 44px;
 }
-.nav-bar ul .bag {
+.nav-bar ul .bag a {
+  display: block;
   background: url(images/header-bag.svg) no-repeat 0 -13px;
   width: 13px;
-  height: 15px;
+  height: 16px;
+  line-height: 44px;
 }
 .nav-bar ul li a {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: normal;
   color: #f5f5f7;
 }
