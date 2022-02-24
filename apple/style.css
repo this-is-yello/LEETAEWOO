@@ -42,7 +42,7 @@ header {
   height: 14px;
   line-height: 44px;
 }
-.nav-bar ul .search a{
+.nav-bar ul .search a {
   display: block;
   background: url(images/Search.svg) no-repeat 0 -15px;
   width: 14px;
@@ -98,9 +98,9 @@ header {
   height: 54px;
 }
 .icon-bar ul .icon2 {
-  background: url(images/MacBook_Pro_14,_16.svg) no-repeat;
-	width: 85px;
-	height: 54px;
+  background: url(images/MacBook_Pro_14_16.svg) no-repeat;
+  width: 85px;
+  height: 54px;
 }
 .icon-bar ul .column {
   display: flex;
@@ -112,18 +112,18 @@ header {
 }
 .icon-bar ul .icon3 {
   background: url(images/compare.svg) no-repeat;
-	width: 45px;
-	height: 54px;
+  width: 45px;
+  height: 54px;
 }
 .icon-bar ul .icon4 {
-  background: url('images/Acc.svg') no-repeat;
-	width: 33px;
-	height: 54px;
+  background: url("images/Acc.svg") no-repeat;
+  width: 33px;
+  height: 54px;
 }
 .icon-bar ul .icon5 {
-  background: url('images/Monterey.svg') no-repeat;
-	width: 35px;
-	height: 54px;
+  background: url("images/Monterey.svg") no-repeat;
+  width: 35px;
+  height: 54px;
 }
 .icon-bar ul li {
   display: flex;
@@ -234,12 +234,59 @@ header {
 }
 #sec2 .model {
   margin: 0 auto;
+  padding-top: 110px;
   display: grid;
   width: 940px;
   height: 1514px;
-  grid-template-columns: repeat(3, 290px);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(11, auto);
   grid-row-gap: 39px;
   grid-column-gap: 35px;
-  grid-area: ;
+  grid-template-areas:
+    "model-1 model-2 model-3"
+    "chip-1 chip-2 chip-3"
+    "cpu-1 cpu-2 cpu-3"
+    "gpu-1 gpu-2 gpu-3"
+    "ram-1 ram-2 ram-3"
+    "disk-1 disk-2 disk-3"
+    "display-1 display-2 display-3"
+    "battery-1 battery-2 battery-3"
+    "camera-1 camera-2 camera-3"
+    "weight-1 weight-2 weight-3"
+    "touch-1 touch-2 touch-3";
+}
+#sec2 .other {
+  margin: 0 auto;
+  padding-bottom: 116px;
+  padding-top: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 560px;
+}
+#sec2 .other a {
+  /* font-weight: bold; */
+  font-size: 20px;
+  color: #0071e3;
+}
+
+#sec3 {
+  margin-top: 30px;
+  width: 100%;
+}
+
+#sec3 .shopping {
+  margin: 0 auto;
+  display: flex;
+  width: 1380px;
+}
+#sec3 .shopping .accessory {
+  background-color: #f2f2f2;
+  margin-right: 15px;
+  width: 675px;
+}
+#sec3 .shopping .trade {
+  background-color: #f2f2f2;
+  margin-left: 15px;
+  width: 675px;
 }
