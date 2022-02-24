@@ -19,8 +19,8 @@ header {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 966px;
+  justify-content: space-between;
+  width: 996px;
   height: 44px;
   line-height: 44px;
 }
@@ -72,13 +72,174 @@ header {
 .icon-bar {
   width: 100%;
   height: 116px;
-  background-color: #f9f9fa;
+  background-color: #f5f5f799;
 }
 .icon-bar ul {
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
+  width: 520px;
+  height: 116px;
+  font-size: 11px;
+  color: #1d1d1f;
+}
+.icon-bar ul a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+.icon-bar ul .icon {
+  margin-bottom: 8px;
+}
+.icon-bar ul .icon1 {
+  background: url(images/MacBook_Pro_13.svg) no-repeat;
+  width: 54px;
+  height: 54px;
+}
+.icon-bar ul .icon2 {
+  background: url(images/MacBook_Pro_14,_16.svg) no-repeat;
+	width: 85px;
+	height: 54px;
+}
+.icon-bar ul .column {
+  display: flex;
+  flex-direction: column;
+}
+.icon-bar ul span {
+  color: #bf4800;
+  /* font-weight: bold; */
+}
+.icon-bar ul .icon3 {
+  background: url(images/compare.svg) no-repeat;
+	width: 45px;
+	height: 54px;
+}
+.icon-bar ul .icon4 {
+  background: url('images/Acc.svg') no-repeat;
+	width: 33px;
+	height: 54px;
+}
+.icon-bar ul .icon5 {
+  background: url('images/Monterey.svg') no-repeat;
+	width: 35px;
+	height: 54px;
+}
+.icon-bar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon-bar ul p {
+  text-align: center;
+  color: #1d1d1f;
+}
+
+#sec1 {
+  width: 100%;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 64px;
+  padding-bottom: 120px;
+}
+.banner h1 {
+  font-size: 80px;
+  padding-bottom: 64px;
+  color: #1d1d1f;
+}
+.banner .model {
+  display: flex;
   justify-content: space-around;
-  width: 600px;
-  height: 44px;
+  align-items: center;
+}
+#sec1 .model-1 {
+  padding-top: 40px;
+}
+#sec1 .model-1 figure {
+  width: 374px;
+  height: 218px;
+  margin: 26px;
+  background-image: url(images/model-1.jpg);
+  background-size: 374px 218px;
+}
+#sec1 .model-2 figure {
+  width: 578px;
+  height: 258px;
+  margin: 26px;
+  background-image: url(images/model-2.jpg);
+  background-size: 578px 258px;
+}
+
+.banner .model .info {
+  margin-top: 36px;
+  text-align: center;
+  color: #1d1d1f;
+}
+.banner .model .info span {
+  color: #bf4800;
+}
+.banner .model .info p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.banner .model .info h2 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.banner .model .info h3 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.banner .model .buttons {
+  display: flex;
+  justify-content: center;
+}
+.banner .model .buttons button {
+  background-color: #0071e3;
+  width: 88px;
+  height: 36px;
+  line-height: 36px;
+  border: none;
+  border-radius: 22px;
+  color: white;
+  font-size: 16px;
+  margin-right: 17px;
+}
+.banner .model .buttons .more {
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0071e3;
+}
+
+#sec2 {
+  width: 100%;
+  background-color: #fafafa;
+  color: #1d1d1f;
+}
+#sec2 h2 {
+  margin: 0 auto;
+  padding-top: 110px;
+  width: 980px;
+  font-size: 40px;
+  text-align: center;
+}
+#sec2 .model {
+  margin: 0 auto;
+  display: grid;
+  width: 940px;
+  height: 1514px;
+  grid-template-columns: repeat(3, 290px);
+  grid-template-rows: repeat(11, auto);
+  grid-row-gap: 39px;
+  grid-column-gap: 35px;
+  grid-area: ;
 }
