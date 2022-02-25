@@ -98,9 +98,9 @@ header {
   height: 54px;
 }
 .icon-bar ul .icon2 {
-  background: url(images/MacBook_Pro_14_16.svg) no-repeat;
-  width: 85px;
-  height: 54px;
+  background: url('images/MacBook_Pro_14,_16.svg') no-repeat;
+	width: 85px;
+	height: 54px;
 }
 .icon-bar ul .column {
   display: flex;
@@ -205,7 +205,6 @@ header {
   background-color: #0071e3;
   width: 88px;
   height: 36px;
-  line-height: 36px;
   border: none;
   border-radius: 22px;
   color: white;
@@ -234,11 +233,11 @@ header {
 }
 #sec2 .model {
   margin: 0 auto;
-  padding-top: 110px;
+  padding-top: 56px;
   display: grid;
   width: 940px;
   height: 1514px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 290px);
   grid-template-rows: repeat(11, auto);
   grid-row-gap: 39px;
   grid-column-gap: 35px;
@@ -254,6 +253,237 @@ header {
     "camera-1 camera-2 camera-3"
     "weight-1 weight-2 weight-3"
     "touch-1 touch-2 touch-3";
+}
+/* --------------- Section2 Grid 공통사항 ---------------- */
+#sec2 .model .model-1 {
+  grid-area: model-1;
+  margin: 0 auto;
+  width: 274px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid #d2d2d7;
+}
+#sec2 .color figure {
+  margin: 0 auto;
+  background-image: url(images/color.png);
+  width: 32px;
+  height: 14px;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+#sec2 .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#sec2 .info h3 {
+  font-size: 24px;
+}
+#sec2 .info p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+#sec2 .info span {
+  color: #bf4800;
+  font-size: 14px;
+}
+#sec2 .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 32px;
+}
+#sec2 button {
+  margin-top: 24px;
+  background-color: #0071e3;
+  width: 64px;
+  height: 30px;
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+}
+#sec2 .more {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #0071e3;
+}
+/* ----------------- Section2 model-1 ------------------ */
+.model-1 .img figure {
+  margin: 0 auto;
+  display: flex;
+  background-image: url(images/13_in.png);
+  width: 212px;
+  height: 124px;
+}
+#sec2 .model .chip-1 {
+  grid-area: chip-1;
+}
+.chip-1 figure {
+  background-image: url(images/M1.png);
+  width: 48px;
+  height: 44px;
+}
+.chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chip p {
+  font-size: 14px;
+  margin-top: 12px;
+}
+#sec2 .model .cpu-1 {
+  grid-area: cpu-1;
+}
+.cpu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cpu p {
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.cpu h4 {
+  font-size: 24px;
+}
+#sec2 .model .gpu-1 {
+  grid-area: gpu-1;
+}
+#sec2 .model .ram-1 {
+  grid-area: ram-1;
+}
+#sec2 .model .disk-1 {
+  grid-area: disk-1;
+}
+#sec2 .model .display-1 {
+  grid-area: display-1;
+}
+#sec2 .model .battery-1 {
+  grid-area: battery-1;
+}
+#sec2 .model .camera-1 {
+  grid-area: camera-1;
+}
+#sec2 .model .weight-1 {
+  grid-area: weight-1;
+}
+#sec2 .model .touch-1 {
+  grid-area: touch-1;
+}
+
+/* ----------------- Section2 model-2 ------------------ */
+#sec2 .model .model-2 {
+  grid-area: model-2;
+  margin: 0 auto;
+  width: 274px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid #d2d2d7;
+}
+.model-2 .img figure {
+  margin: 0 auto;
+  display: flex;
+  background-image: url(images/14_in.png);
+  width: 212px;
+  height: 130px;
+}
+#sec2 .model .chip-2 {
+  grid-area: chip-2;
+}
+.chip-2 figure {
+  background-image: url(images/M1_pro.png);
+  width: 90px;
+  height: 40px;
+}
+#sec2 .model .cpu-2 {
+  grid-area: cpu-2;
+}
+#sec2 .model .gpu-2 {
+  grid-area: gpu-2;
+}
+#sec2 .model .ram-2 {
+  grid-area: ram-2;
+}
+#sec2 .model .disk-2 {
+  grid-area: disk-2;
+}
+#sec2 .model .display-2 {
+  grid-area: display-2;
+}
+#sec2 .model .battery-2 {
+  grid-area: battery-2;
+}
+#sec2 .model .camera-2 {
+  grid-area: camera-2;
+}
+#sec2 .model .weight-2 {
+  grid-area: weight-2;
+}
+#sec2 .model .touch-2 {
+  grid-area: touch-2;
+}
+
+/* ----------------- Section2 model-3 ------------------ */
+#sec2 .model .model-3 {
+  grid-area: model-3;
+  margin: 0 auto;
+  width: 274px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid #d2d2d7;
+}
+.model-3 .img figure {
+  margin: 0 auto;
+  display: flex;
+  background-image: url(images/16_in.png);
+  width: 236px;
+  height: 146px;
+}
+#sec2 .model .chip-3 {
+  grid-area: chip-3;
+}
+.chip-3 figure {
+  background-image: url(images/M1_pro.png);
+  width: 90px;
+  height: 40px;
+}
+#sec2 .model .cpu-3 {
+  grid-area: cpu-3;
+}
+#sec2 .model .gpu-3 {
+  grid-area: gpu-3;
+}
+#sec2 .model .ram-3 {
+  grid-area: ram-3;
+}
+#sec2 .model .disk-3 {
+  grid-area: disk-3;
+}
+#sec2 .model .display-3 {
+  grid-area: display-3;
+}
+#sec2 .model .battery-3 {
+  grid-area: battery-3;
+}
+#sec2 .model .camera-3 {
+  grid-area: camera-3;
+}
+#sec2 .model .weight-3 {
+  grid-area: weight-3;
+}
+#sec2 .model .touch-3 {
+  grid-area: touch-3;
 }
 #sec2 .other {
   margin: 0 auto;
