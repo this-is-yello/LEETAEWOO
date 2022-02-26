@@ -3,6 +3,9 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+  font-family: "SF Pro KR", "SF Pro Text", "SF Pro Icons", "Apple Gothic",
+    "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
 }
 
 header {
@@ -98,9 +101,9 @@ header {
   height: 54px;
 }
 .icon-bar ul .icon2 {
-  background: url('images/MacBook_Pro_14,_16.svg') no-repeat;
-	width: 85px;
-	height: 54px;
+  background: url("images/MacBook_Pro_14,_16.svg") no-repeat;
+  width: 85px;
+  height: 54px;
 }
 .icon-bar ul .column {
   display: flex;
@@ -236,7 +239,6 @@ header {
   padding-top: 56px;
   display: grid;
   width: 940px;
-  height: 1514px;
   grid-template-columns: repeat(3, 290px);
   grid-template-rows: repeat(11, auto);
   grid-row-gap: 39px;
@@ -253,6 +255,14 @@ header {
     "camera-1 camera-2 camera-3"
     "weight-1 weight-2 weight-3"
     "touch-1 touch-2 touch-3";
+}
+#sec2 .model h4 {
+  font-size: 24px;
+}
+#sec2 .model p {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 4px;
 }
 /* --------------- Section2 Grid 공통사항 ---------------- */
 #sec2 .model .model-1 {
@@ -323,19 +333,15 @@ header {
 #sec2 .model .chip-1 {
   grid-area: chip-1;
 }
-.chip-1 figure {
-  background-image: url(images/M1.png);
-  width: 48px;
-  height: 44px;
-}
 .chip {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.chip p {
-  font-size: 14px;
-  margin-top: 12px;
+.chip-1 figure {
+  background-image: url(images/M1.png);
+  width: 48px;
+  height: 44px;
 }
 #sec2 .model .cpu-1 {
   grid-area: cpu-1;
@@ -345,37 +351,91 @@ header {
   flex-direction: column;
   align-items: center;
 }
-.cpu p {
-  font-size: 14px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.cpu h4 {
-  font-size: 24px;
-}
 #sec2 .model .gpu-1 {
   grid-area: gpu-1;
+}
+.gpu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #sec2 .model .ram-1 {
   grid-area: ram-1;
 }
+.ram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ram figure {
+  background-image: url(images/Ram.png);
+  width: 48px;
+  height: 44px;
+}
 #sec2 .model .disk-1 {
   grid-area: disk-1;
+}
+.disk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #sec2 .model .display-1 {
   grid-area: display-1;
 }
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #sec2 .model .battery-1 {
   grid-area: battery-1;
+}
+.battery figure {
+  background-image: url(images/Battery.png);
+  width: 48px;
+  height: 44px;
+}
+.battery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #sec2 .model .camera-1 {
   grid-area: camera-1;
 }
+.camera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.camera figure {
+  background-image: url(images/Camera.png);
+  width: 48px;
+  height: 44px;
+}
 #sec2 .model .weight-1 {
   grid-area: weight-1;
 }
+.weight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #sec2 .model .touch-1 {
   grid-area: touch-1;
+}
+.model .touch-1 figure {
+  background-image: url(images/Touch_Bar.png);
+  width: 48px;
+  height: 44px;
+}
+.touch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #d2d2d7;
 }
 
 /* ----------------- Section2 model-2 ------------------ */
@@ -431,6 +491,11 @@ header {
 #sec2 .model .touch-2 {
   grid-area: touch-2;
 }
+.model .touch-2 figure {
+  background-image: url(images/Touch_ID.png);
+  width: 48px;
+  height: 44px;
+}
 
 /* ----------------- Section2 model-3 ------------------ */
 #sec2 .model .model-3 {
@@ -485,17 +550,23 @@ header {
 #sec2 .model .touch-3 {
   grid-area: touch-3;
 }
+.model .touch-3 figure {
+  background-image: url(images/Touch_ID.png);
+  width: 48px;
+  height: 44px;
+}
 #sec2 .other {
   margin: 0 auto;
-  padding-bottom: 116px;
-  padding-top: 56px;
+  padding-top: 48px;
+  padding-bottom: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 560px;
+  width: 420px;
+  height: 40px;
+  line-height: 40px;
 }
 #sec2 .other a {
-  /* font-weight: bold; */
   font-size: 20px;
   color: #0071e3;
 }
@@ -503,20 +574,180 @@ header {
 #sec3 {
   margin-top: 30px;
   width: 100%;
+  color: #1d1d1f;
 }
 
 #sec3 .shopping {
   margin: 0 auto;
   display: flex;
   width: 1380px;
+  height: 750px;
 }
 #sec3 .shopping .accessory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #f2f2f2;
   margin-right: 15px;
   width: 675px;
 }
+.shopping .accessory p {
+  padding-top: 64px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.shopping h2 {
+  text-align: center;
+  padding-top: 8px;
+  font-size: 40px;
+}
+.shopping .accessory button {
+  margin-top: 16px;
+  margin-bottom: 58px;
+  background-color: #0071e3;
+  width: 85px;
+  height: 36px;
+  border: none;
+  border-radius: 21px;
+}
+.accessory button a {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+.accessory figure {
+  background-image: url(images/Accessory.jpg);
+  width: 675px;
+  height: 272px;
+}
 #sec3 .shopping .trade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #f2f2f2;
   margin-left: 15px;
   width: 675px;
+}
+.shopping .trade p:first-child {
+  padding-top: 64px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.trade h2 {
+  width: 480px;
+}
+.shopping .trade p:nth-child(3) {
+  padding-top: 14px;
+  width: 424px;
+  font-size: 16px;
+  text-align: center;
+}
+.shopping .trade a {
+  padding-top: 24px;
+  font-size: 16px;
+  color: #0071e3;
+}
+.shopping .trade figure {
+  margin-top: 84px;
+  background-image: url(images/Credit.jpg);
+  width: 424px;
+  height: 282px;
+}
+#sec3 .learn {
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  width: 1380px;
+  height: 600px;
+}
+#sec3 .learn .work {
+  background-image: url(images/apple_at_work.jpg);
+  width: 675px;
+  height: 600px;
+  margin-right: 15px;
+  color: #f5f5f7;
+}
+.learn .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+.learn h2 {
+  font-size: 44px;
+}
+.learn p {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.learn a {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #ffffff;
+}
+#sec3 .learn .education {
+  background-image: url(images/apple_and_education.jpg);
+  width: 675px;
+  height: 600px;
+  margin-left: 15px;
+  color: #f5f5f7;
+}
+#sec3 .more {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 120px;
+  width: 1350px;
+}
+#sec3 .more .delivery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  width: 665px;
+}
+.more .delivery figure {
+  background-image: url(images/Delivery.png);
+  width: 40px;
+  height: 44px;
+  margin: 20px 24px;
+}
+#sec3 .more .credit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  width: 665px;
+}
+.more .credit figure {
+  background: url("images/icon-credit.svg") no-repeat;
+  width: 88px;
+  height: 88px;
+}
+.more h3 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #333333;
+}
+.more p {
+  padding-top: 24px;
+  text-align: center;
+  font-size: 20px;
+}
+.more a {
+  padding-top: 24px;
+  font-size: 21px;
+  color: #0071e3;
+}
+footer {
+  width: 100%;
+  font-size: 13px;
+  color: #6e6e73;
+  background-color: #f5f5f7;
 }
