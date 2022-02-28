@@ -743,6 +743,9 @@ header {
   font-size: 21px;
   color: #0071e3;
 }
+.more a:hover {
+  text-decoration: underline;
+}
 footer {
   width: 100%;
   font-size: 12px;
@@ -754,6 +757,9 @@ footer .terms {
   padding-top: 16px;
   width: 980px;
   border-bottom: 1px solid #d2d2d7;
+}
+footer .terms a:hover {
+  text-decoration: underline;
 }
 footer .terms p {
   padding-bottom: 12px;
@@ -775,6 +781,9 @@ footer .foot-nav {
   font-size: 11px;
   color: #424245;
   width: 980px;
+}
+.foot-nav a:hover {
+  text-decoration: underline;
 }
 .foot-nav .top {
   display: flex;
@@ -833,6 +842,9 @@ footer .copyright {
   padding-bottom: 24px;
   margin: 0 auto;
   width: 980px;
+}
+footer .copyright a:hover {
+  text-decoration: underline;
 }
 footer .copyright .c-top {
   padding-bottom: 8px;
