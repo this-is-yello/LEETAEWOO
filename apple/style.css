@@ -58,6 +58,7 @@ header {
   line-height: 44px;
 }
 .nav-bar ul li a {
+  display: block;
   font-size: 11px;
   font-weight: normal;
   color: #f5f5f7;
@@ -589,7 +590,7 @@ header {
 #sec3 .shopping {
   margin: 0 auto;
   display: flex;
-  width: 1380px;
+  max-width: 1440px;
   height: 750px;
 }
 #sec3 .shopping .accessory {
@@ -598,6 +599,7 @@ header {
   align-items: center;
   background-color: #f2f2f2;
   margin-right: 15px;
+  margin-left: 30px;
   width: 675px;
 }
 .shopping .accessory p {
@@ -625,10 +627,16 @@ header {
   font-size: 14px;
   font-weight: bold;
 }
-.accessory figure {
-  background-image: url(images/Accessory.jpg);
-  width: 675px;
+.accessory .img {
+  width: 100%;
   height: 272px;
+}
+.accessory .img figure {
+  background: url(images/Accessory.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 #sec3 .shopping .trade {
   display: flex;
@@ -636,6 +644,7 @@ header {
   align-items: center;
   background-color: #f2f2f2;
   margin-left: 15px;
+  margin-right: 30px;
   width: 675px;
 }
 .shopping .trade p:first-child {
@@ -661,18 +670,24 @@ header {
 .trade a:hover {
   text-decoration: underline;
 }
-.shopping .trade figure {
-  margin-top: 84px;
-  background-image: url(images/Credit.jpg);
+.shopping .trade .img {
+  padding-top: 80px;
   width: 424px;
   height: 282px;
+}
+.shopping .trade figure {
+  background: url(images/Credit.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 #sec3 .learn {
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
-  width: 1380px;
+  max-width: 1440px;
   height: 600px;
 }
 #sec3 .learn .work {
@@ -680,6 +695,7 @@ header {
   width: 675px;
   height: 600px;
   margin-right: 15px;
+  margin-left: 30px;
   color: #f5f5f7;
 }
 .learn .text {
@@ -694,6 +710,7 @@ header {
 }
 .learn p {
   margin-top: 20px;
+  text-align: center;
   font-size: 15px;
   font-weight: bold;
 }
@@ -710,6 +727,7 @@ header {
   width: 675px;
   height: 600px;
   margin-left: 15px;
+  margin-right: 30px;
   color: #f5f5f7;
 }
 #sec3 .more {
@@ -718,14 +736,14 @@ header {
   margin: 0 auto;
   padding-top: 80px;
   padding-bottom: 160px;
-  width: 1350px;
+  max-width: 1440px;
 }
 #sec3 .more .delivery {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 10px;
-  width: 665px;
+  padding: 0 30px;
+  width: 675px;
 }
 .more .delivery figure {
   background-image: url(images/Delivery.png);
@@ -737,8 +755,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 10px;
-  width: 665px;
+  padding: 0 30px;
+  width: 675px;
 }
 .more .credit figure {
   background: url("images/icon-credit.svg") no-repeat;
@@ -772,8 +790,9 @@ footer {
 footer .terms {
   margin: 0 auto;
   padding-top: 16px;
+  padding-right: 22px;
+  padding-left: 22px;
   width: 980px;
-  border-bottom: 1px solid #d2d2d7;
 }
 footer .terms a:hover {
   text-decoration: underline;
@@ -795,6 +814,8 @@ footer .terms a {
 }
 footer .foot-nav {
   margin: 0 auto;
+  padding-left: 22px;
+  padding-right: 22px;
   font-size: 11px;
   color: #424245;
   width: 980px;
@@ -804,9 +825,11 @@ footer .foot-nav {
 }
 .foot-nav .top {
   display: flex;
+  align-items: center;
   padding-top: 24px;
   padding-bottom: 24px;
   line-height: 20px;
+  border-top: 1px solid #d2d2d7;
 }
 .foot-nav .top span {
   width: 1px;
