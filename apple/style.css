@@ -212,12 +212,15 @@ header {
   font-size: 16px;
   margin-right: 17px;
 }
-.banner .model .buttons .more {
+.banner .buttons .more {
   height: 36px;
   line-height: 36px;
   font-size: 16px;
   font-weight: bold;
   color: #0071e3;
+}
+.banner .buttons .more:hover {
+  text-decoration: underline;
 }
 
 #sec2 {
@@ -261,6 +264,10 @@ header {
   font-size: 14px;
   margin-top: 8px;
   margin-bottom: 4px;
+}
+
+#sec2 .model .more:hover {
+  text-decoration: underline;
 }
 /* --------------- Section2 Grid 공통사항 ---------------- */
 #sec2 .model .model-1 {
@@ -569,6 +576,10 @@ header {
   color: #0071e3;
 }
 
+#sec2 .other a:hover {
+  text-decoration: underline;
+}
+
 #sec3 {
   margin-top: 30px;
   width: 100%;
@@ -647,6 +658,9 @@ header {
   font-size: 16px;
   color: #0071e3;
 }
+.trade a:hover {
+  text-decoration: underline;
+}
 .shopping .trade figure {
   margin-top: 84px;
   background-image: url(images/Credit.jpg);
@@ -687,6 +701,9 @@ header {
   margin-top: 20px;
   font-size: 15px;
   color: #ffffff;
+}
+.learn a:hover {
+  text-decoration: underline;
 }
 #sec3 .learn .education {
   background-image: url(images/apple_and_education.jpg);
