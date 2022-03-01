@@ -880,6 +880,8 @@ footer .copyright {
   flex-direction: column;
   padding-top: 36px;
   padding-bottom: 24px;
+  padding-left: 22px;
+  padding-right: 22px;
   margin: 0 auto;
   width: 980px;
 }
@@ -900,4 +902,7 @@ footer .copyright .c-top {
 }
 .copyright .c-bottom a {
   color: #424245;
+}
+
+@media screen and (max-width: 1068px) {
 }
