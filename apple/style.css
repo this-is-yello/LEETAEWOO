@@ -20,7 +20,7 @@ header {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 996px;
   height: 44px;
   line-height: 44px;
@@ -37,6 +37,7 @@ header {
   background-position: center center;
   width: 14px;
   height: 44px;
+  line-height: 44px;
 }
 .nav-bar ul .search {
   width: 14px;
@@ -62,6 +63,10 @@ header {
   font-size: 11px;
   font-weight: normal;
   color: #f5f5f7;
+  opacity: 0.8;
+}
+.nav-bar ul li a:hover {
+  opacity: 1;
 }
 .nav-bar span {
   width: 1px;
@@ -133,8 +138,12 @@ header {
   justify-content: space-between;
 }
 .icon-bar ul p {
+  display: block;
   text-align: center;
   color: #1d1d1f;
+}
+.icon-bar ul li a:hover p{
+  color: #0071e3;
 }
 
 #sec1 {
@@ -213,6 +222,9 @@ header {
   font-size: 16px;
   margin-right: 17px;
 }
+.model .buttons button:hover {
+  background: #0077ED;
+}
 .banner .buttons .more {
   height: 36px;
   line-height: 36px;
@@ -241,6 +253,7 @@ header {
   padding-top: 56px;
   display: grid;
   width: 940px;
+  text-align: center;
   grid-template-columns: repeat(3, 290px);
   grid-template-rows: repeat(11, auto);
   grid-row-gap: 39px;
@@ -258,6 +271,9 @@ header {
     "weight-1 weight-2 weight-3"
     "touch-1 touch-2 touch-3";
 }
+#sec2 .model br {
+  display: none;
+}
 #sec2 .model h4 {
   font-size: 24px;
 }
@@ -266,7 +282,9 @@ header {
   margin-top: 8px;
   margin-bottom: 4px;
 }
-
+#sec2 .model button:hover {
+  background-color: #0077ED;
+}
 #sec2 .model .more:hover {
   text-decoration: underline;
 }
@@ -591,7 +609,6 @@ header {
   margin: 0 auto;
   display: flex;
   max-width: 1440px;
-  height: 750px;
 }
 #sec3 .shopping .accessory {
   display: flex;
@@ -603,25 +620,38 @@ header {
   width: 675px;
 }
 .shopping .accessory p {
-  padding-top: 64px;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
 }
+.shopping .accessory br {
+  display: none;
+}
 .shopping h2 {
   text-align: center;
   padding-top: 8px;
-  font-size: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 44px;
 }
-.shopping .accessory button {
+.shopping .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 64px 10px 58px;
+}
+.shopping .accessory .text button {
   margin-top: 16px;
-  margin-bottom: 58px;
   background-color: #0071e3;
   width: 85px;
   height: 36px;
   border: none;
   border-radius: 21px;
 }
+.shopping .accessory button:hover {
+  background-color: #0077ED;
+} 
 .accessory button a {
   color: white;
   font-size: 14px;
@@ -648,13 +678,12 @@ header {
   width: 675px;
 }
 .shopping .trade p:first-child {
-  padding-top: 64px;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
 }
-.trade h2 {
-  width: 480px;
+.shopping .trade .none {
+  display: none;
 }
 .shopping .trade p:nth-child(3) {
   padding-top: 14px;
@@ -671,16 +700,15 @@ header {
   text-decoration: underline;
 }
 .shopping .trade .img {
-  padding-top: 80px;
-  width: 424px;
-  height: 282px;
+  display: flex;
+  justify-content: flex-end;
 }
 .shopping .trade figure {
   background: url(images/Credit.jpg);
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 100%;
+  width: 424px;
+  height: 282px;
 }
 #sec3 .learn {
   margin: 0 auto;
@@ -903,6 +931,85 @@ footer .copyright .c-top {
 .copyright .c-bottom a {
   color: #424245;
 }
+@media screen and (max-width: 1292px) {
+  .shopping .accessory br {
+    display: block;
+  }
+}
+
 
 @media screen and (max-width: 1068px) {
+  #sec1 .model-1 {
+    padding-top: 30px;
+  }
+  #sec1 .model-1 figure {
+    width: 264px;
+    height: 156px;
+    background-size: 264px 156px;
+  }
+  #sec1 .model-2 figure {
+    width: 408px;
+    height: 182px;
+    background-size: 408px 182px;
+  }
+  .banner h1 {
+    font-size: 64px;
+  }
+  .banner .model .info span {
+    font-size: 12px;
+  }
+  .banner .model .info p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .banner .model .info h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .banner .model .info h3 {
+    font-size: 21px;
+    margin-bottom: 24px;
+  }
+  #sec2 h2 {
+    font-size: 36px;
+  }
+  #sec2 .model {
+    width: 746px;
+    grid-template-columns: repeat(3, 236px);
+    grid-column-gap: 19px;
+  }
+  #sec2 .model br {
+    display: block;
+  }
+  #sec2 .model .model-1 {
+    width: 236px;
+  }
+  #sec2 .model .model-2 {
+    width: 236px;
+  }
+  #sec2 .model .model-3 {
+    width: 236px;
+  }
+  .shopping .trade {
+    
+  }
+  .shopping .trade figure {
+    background: url(images/Credit_small.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 296px;
+    height: 176px;
+  }
+  .shopping .trade {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    margin-left: 15px;
+    margin-right: 30px;
+    width: 296px;
+  }
 }
