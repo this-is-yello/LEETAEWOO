@@ -770,6 +770,7 @@ header {
   background: url(images/Credit.jpg);
   width: 424px;
   height: 282px;
+  background-size: 424px 282px;
 }
 #sec3 .learn {
   margin: 0 auto;
