@@ -680,7 +680,7 @@ header {
   background-color: #f2f2f2;
   margin-right: 15px;
   margin-left: 30px;
-  width: 675px;
+  width: 50%;
 }
 .shopping .accessory p {
   font-size: 24px;
@@ -735,7 +735,7 @@ header {
   background-color: #f2f2f2;
   margin-left: 15px;
   margin-right: 30px;
-  width: 675px;
+  width: 50%;
 }
 .shopping .trade p:first-child {
   font-size: 24px;
@@ -747,7 +747,6 @@ header {
 }
 .shopping .trade p:nth-child(3) {
   padding-top: 14px;
-  width: 424px;
   font-size: 16px;
   text-align: center;
 }
@@ -990,11 +989,13 @@ footer .copyright .c-top {
 .copyright .c-bottom a {
   color: #424245;
 }
+
+
 @media screen and (max-width: 1257px) {
   .shopping .trade .none {
     display: block;
   }
-  .shopping .trade .block br {
+  .shopping .trade .block {
     display: none;
   }
 }
@@ -1078,10 +1079,69 @@ footer .copyright .c-top {
   }
 }
 @media screen and (max-width: 833px) {
+  .shopping .trade .none {
+    display: block;
+  }
   #hidden {
     display: block;
   }
   .nav-bar {
+    display: none;
+    width: 833px;
+  }
+  .foot-nav nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .foot-nav nav ul {
+    display: flex;
+    flex-direction: column;
+    height: 26px;
+    line-height: 26px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .foot-nav nav ul p {
+    height: 26px;
+    line-height: 26px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #6e6e73;
+    border-top: 1px solid #d2d2d7;
+    margin-bottom: 0px;
+  }
+  .foot-nav nav ul:nth-child(2) {
+    height: 72px;
+  }
+  .foot-nav nav ul:nth-child(4) {
+    height: 72px;
+  }
+  .foot-nav nav ul:nth-child(5) {
+    height: 72px;
+  }
+  .foot-nav nav ul ul {
+    display: flex;
+    flex-direction: column;
+    height: 26px;
+    line-height: 26px;
+    padding-bottom: 5px;
+  }
+  .foot-nav nav ul ul p {
+    height: 26px;
+    line-height: 26px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #6e6e73;
+    border-top: 1px solid #d2d2d7;
+    margin-bottom: 0px;
+  }
+  .foot-nav nav .bottom {
+    border-bottom: 1px solid #d2d2d7;
+  }
+  .foot-nav nav ul ul {
+    margin-top: 0px;
+  }
+  .foot-nav nav ul li {
     display: none;
   }
 }
