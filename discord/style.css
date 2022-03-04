@@ -4,7 +4,6 @@
   list-style: none;
   text-decoration: none;
 }
-
 :root {
   --text-blue: #5865f2;
   --out-text: #4f545c;
@@ -12,6 +11,7 @@
   --footer-background: #23272a;
 }
 
+/* ----------------------- header ------------------------------- */
 header {
   width: 100%;
   height: 70px;
@@ -33,9 +33,182 @@ header .nav-bar figure {
 header .nav-bar ul {
   display: flex;
   justify-content: space-around;
-  width: 400px;
+  width: 360px;
 }
 .nav-bar ul li a {
   font-size: 14px;
   color: var(--text-blue);
+}
+
+/* ----------------------- banner ------------------------------- */
+#banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/Banner.png);
+  width: 100%;
+  height: 300px;
+  background-size: 100% 300px;
+  background-position: center;
+  background-size: cover;
+}
+#banner h1 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+#banner .search {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #4f545c;
+  box-sizing: border-box;
+}
+#banner .search figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.search figure svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+#banner .search input {
+  width: 100%;
+  height: 40px;
+  padding-right: 32px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+/* ----------------------- section ------------------------------- */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: var(--out-text);
+}
+section .text-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 24px;
+}
+section .text-1 h2 {
+  font-size: 28px;
+  font-weight: normal;
+  padding-bottom: 16px;
+}
+section .text-1 p {
+  text-align: center;
+  padding: 0 24px;
+}
+section .text-1 p a {
+  color: var(--text-blue);
+}
+section .menu-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+section .box {
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+  height: 260px;
+  border-radius: 8px;
+  background-color: white;
+}
+section .menu-box .box {
+  box-shadow: 2px 2px 2px 2px rgba(153, 153, 153, 0.2);
+}
+section .box:hover {
+  cursor: pointer;
+  transform: translateY(-8px);
+}
+.box h3 {
+  font-size: 24px;
+  font-weight: normal;
+  color: var(--text-blue);
+  padding-bottom: 24px;
+}
+.box hr {
+  width: 36px;
+  margin-bottom: 12px;
+}
+.box p {
+  text-align: center;
+  font-size: 14px;
+  color: var(--box-text);
+}
+section .menu-box .box figure {
+  margin-top: 8px;
+  width: 120px;
+  height: 120px;
+  background-size: 120px 120px;
+}
+.menu-box .box-1 figure {
+  background: url(images/Announcement.svg);
+}
+.menu-box .box-2 figure {
+  background: url(images/Interface.svg);
+}
+.menu-box .box-3 figure {
+  background: url(images/Account_setting.svg);
+}
+.menu-box .box-4 figure {
+  background: url(images/Start.svg);
+}
+.menu-box .box-5 figure {
+  background: url(images/Server-setting.svg);
+}
+.menu-box .box-6 figure {
+  background: url(images/Comunity.svg);
+}
+.menu-box .box-7 figure {
+  background: url(images/Nitro.svg);
+}
+.menu-box .box-8 figure {
+  background: url(images/Bill.svg);
+}
+.menu-box .box-9 figure {
+  background: url(images/Security.svg);
+}
+.menu-box .box-10 figure {
+  background: url(images/QnA.svg);
+}
+section .more-menu {
+  display: flex;
+  flex-direction: column;
+}
+.more-menu .more-box .box {
+  background-color: #f2f2f2;
+}
+section .more-menu .more-box {
+  display: flex;
+}
+section .more-box .box figure {
+  margin-top: 8px;
+  width: 100px;
+  height: 100px;
+  background-size: 100px 100px;
+}
+.more-box .box-11 figure {
+  background-image: url(images/Game-developer.svg);
+}
+.more-box .box-12 figure {
+  background-image: url(images/Twitter.svg);
 }
