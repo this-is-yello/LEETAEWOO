@@ -5,12 +5,15 @@
   text-decoration: none;
 }
 :root {
-  --text-blue: #5865f2;
+  --blue: #5865f2;
   --out-text: #4f545c;
   --box-text: #68727e;
   --footer-background: #23272a;
+  --green: #3ba55c;
 }
-
+body {
+  position: relative;
+}
 /* ----------------------- header ------------------------------- */
 header {
   width: 100%;
@@ -37,7 +40,19 @@ header .nav-bar ul {
 }
 .nav-bar ul li a {
   font-size: 14px;
-  color: var(--text-blue);
+  color: var(--blue);
+}
+.nav-bar ul li a:hover {
+  text-decoration: underline;
+}
+.nav-bar ul li select {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--blue);
+}
+.nav-bar ul li select:hover {
+  text-decoration: underline;
 }
 
 /* ----------------------- banner ------------------------------- */
@@ -113,7 +128,10 @@ section .text-1 p {
   padding: 0 24px;
 }
 section .text-1 p a {
-  color: var(--text-blue);
+  color: var(--blue);
+}
+section .text-1 p a:hover {
+  text-decoration: underline;
 }
 section .menu-box {
   display: flex;
@@ -133,7 +151,7 @@ section .box {
   background-color: white;
 }
 section .menu-box .box {
-  box-shadow: 2px 2px 2px 2px rgba(153, 153, 153, 0.2);
+  box-shadow: 3px 3px 3px 3px rgba(153, 153, 153, 0.1);
 }
 section .box:hover {
   cursor: pointer;
@@ -142,12 +160,14 @@ section .box:hover {
 .box h3 {
   font-size: 24px;
   font-weight: normal;
-  color: var(--text-blue);
+  color: var(--blue);
   padding-bottom: 24px;
 }
-.box hr {
+a .box hr {
   width: 36px;
   margin-bottom: 12px;
+  color: var(--box-text);
+  opacity: 0.5;
 }
 .box p {
   text-align: center;
@@ -193,6 +213,13 @@ section .menu-box .box figure {
 section .more-menu {
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
+  margin-bottom: 64px;
+}
+section .more-menu h4 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 16px;
 }
 .more-menu .more-box .box {
   background-color: #f2f2f2;
@@ -201,7 +228,7 @@ section .more-menu .more-box {
   display: flex;
 }
 section .more-box .box figure {
-  margin-top: 8px;
+  margin-top: 12px;
   width: 100px;
   height: 100px;
   background-size: 100px 100px;
@@ -211,4 +238,156 @@ section .more-box .box figure {
 }
 .more-box .box-12 figure {
   background-image: url(images/Twitter.svg);
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--footer-background);
+}
+footer .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1000px;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+}
+footer button {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 240px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--green);
+}
+footer button:hover {
+  cursor: pointer;
+}
+footer button a {
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+footer .device {
+  background-image: url(images/Devices.png);
+  background-size: 814px 145px;
+  width: 814px;
+  height: 145px;
+}
+footer .device .os {
+  position: relative;
+  display: flex;
+}
+.os a {
+  opacity: 0.5;
+}
+.os a:hover {
+  opacity: 1;
+}
+footer .device .browser {
+  position: absolute;
+  top: 60px;
+  left: 87px;
+  background-image: url(images/Browser.svg);
+  background-image: 174px 50px;
+  width: 174px;
+  height: 50px;
+}
+footer .device .android {
+  position: absolute;
+  top: 60px;
+  left: 380px;
+  background-image: url(images/Android.svg);
+  background-image: 41px 50px;
+  width: 41px;
+  height: 50px;
+}
+footer .device .apple {
+  position: absolute;
+  top: 60px;
+  left: 472px;
+  background-image: url(images/Apple.svg);
+  background-image: 40px 48px;
+  width: 40px;
+  height: 48px;
+}
+footer .device .windows {
+  position: absolute;
+  top: 60px;
+  left: 622px;
+  background-image: url(images/Windows.svg);
+  background-image: 50px 50px;
+  width: 50px;
+  height: 50px;
+}
+footer .device .mac {
+  position: absolute;
+  top: 60px;
+  left: 694px;
+  background-image: url(images/Mac.svg);
+  background-image: 51px 50px;
+  width: 51px;
+  height: 50px;
+}
+footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  padding: 24px 50px;
+}
+.bottom .footer-logo {
+  height: 36px;
+}
+.bottom .footer-logo figure {
+  background-image: url(images/White-logo.svg);
+  background-size: 130px 36px;
+  width: 130px;
+  height: 36px;
+}
+footer .bottom .nav {
+  display: flex;
+}
+.bottom .nav li {
+  display: flex;
+  width: 200px;
+  height: 30px;
+}
+.bottom .nav li a {
+  color: white;
+  opacity: 0.5;
+}
+.bottom .nav li span {
+  color: var(--green);
+}
+.bottom .nav li a:hover {
+  opacity: 1;
+}
+.fixed {
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: var(--blue);
+}
+.fixed figure {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.fixed svg {
+  fill: white;
+}
+.fixed p {
+  color: white;
+  font-weight: bold;
 }
