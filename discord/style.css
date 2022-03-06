@@ -150,8 +150,8 @@ section .box {
   border-radius: 8px;
   background-color: white;
 }
-section .menu-box .box {
-  box-shadow: 3px 3px 3px 3px rgba(153, 153, 153, 0.1);
+section .box {
+  box-shadow: 3px 3px 3px 3px rgba(214, 214, 214, 0.1);
 }
 section .box:hover {
   cursor: pointer;
@@ -239,6 +239,8 @@ section .more-box .box figure {
 .more-box .box-12 figure {
   background-image: url(images/Twitter.svg);
 }
+
+/* ----------------------- footer ------------------------------- */
 footer {
   display: flex;
   flex-direction: column;
@@ -258,19 +260,16 @@ footer button {
   margin-bottom: 40px;
   width: 240px;
   height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
   border: none;
   border-radius: 20px;
   background-color: var(--green);
 }
 footer button:hover {
   cursor: pointer;
-}
-footer button a {
-  color: white;
-  height: 40px;
-  line-height: 40px;
-  font-size: 16px;
-  font-weight: bold;
 }
 footer .device {
   background-image: url(images/Devices.png);
@@ -366,6 +365,8 @@ footer .bottom .nav {
 .bottom .nav li a:hover {
   opacity: 1;
 }
+
+/* ----------------------- fixed ------------------------------- */
 .fixed {
   position: fixed;
   bottom: 16px;
