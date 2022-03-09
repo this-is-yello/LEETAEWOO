@@ -70,30 +70,26 @@ header .nav-bar ul {
     display: flex;
 }
 .banner-contents {
-    /* ---------- background ---------- */
     margin: 0 auto;
     height: 100%;
-    /* ---------- contents ---------- */
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 30%;
-    max-width: 1200px;
+    width: 1200px;
     height: auto;
+    padding: 0 36px;
 }
 .banner-contents h2 {
-    padding: 0 36px;
     font-size: 44px;
     color: var(--white);
 }
 .banner-contents .white-ko-logo img {
-    padding: 0 36px;
     width: 310px;
     height: 108px;
     margin: 24px 0 36px 0px;
 }
 .banner-contents .download {
-    padding: 0 36px;
     display: flex;
     width: 100%;
 }
