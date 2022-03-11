@@ -547,6 +547,7 @@ footer {
 }
 .fixed:hover {
   background-color: #009281;
+  transition: 0.2s;
 }
 @media screen and (max-width: 1200px) {
   .how-to-use .use figure {
