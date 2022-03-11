@@ -46,6 +46,10 @@ header .nav-bar {
   overflow: hidden;
   clip-path: inset(50%);
 }
+.nav-bar .logo:hover {
+  opacity: 0.5;
+  transition: 0.2s;
+}
 header .nav-bar ul {
   display: flex;
   justify-content: space-between;
@@ -75,6 +79,7 @@ header .nav-bar ul {
 }
 
 .banner {
+  position: relative;
   background-color: var(--main-color);
   width: 100%;
   height: 959px;
@@ -124,6 +129,7 @@ header .nav-bar ul {
   width: 200px;
   height: 48px;
   font-size: 16px;
+  margin: 0;
 }
 .banner-contents .download a:hover {
   opacity: 0.7;
@@ -142,18 +148,19 @@ header .nav-bar ul {
   margin-right: 24px;
 }
 .banner .page-down {
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   max-width: 1200px;
+  position: absolute;
+  bottom: 0;
 }
 .banner .page-down img {
   width: 100px;
   height: 100px;
 }
-.banner .page-down {
-  position: absolute;
-  bottom: 0;
+.banner .page-down:hover {
+  opacity: 0.5;
+  transition: 0.2s;
 }
 
 .with-kickgoing {
@@ -237,9 +244,12 @@ header .nav-bar ul {
   height: 100%;
 }
 .slide figure img {
-  opacity: 0.8;
   width: 50px;
   height: 50px;
+}
+.slide figure img:hover {
+  opacity: 0.5;
+  transition: 0.2s;
 }
 .slide .slide-contents {
   color: var(--white);
@@ -299,7 +309,10 @@ header .nav-bar ul {
 }
 .easy-text ul li a figure {
   background-image: url(images/Img_Marking_Light.png);
-  background-size: 130px 32px;
+  background-size: 146px 20px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding: 0 16px;
   width: 130px;
   height: 32px;
 }
@@ -313,7 +326,7 @@ header .nav-bar ul {
 }
 .easy-text ul li:hover a {
   opacity: 0.7;
-  transition: 0.2;
+  transition: 0.2s;
 }
 
 .safty-riding {
@@ -352,6 +365,8 @@ header .nav-bar ul {
   height: 80px;
   border-bottom: 2px solid #f2f4f7;
   margin: 8px 0;
+  font-size: 32px;
+  color: var(--text-color);
 }
 .safty-contents ul li figure {
   width: 60px;
@@ -362,12 +377,7 @@ header .nav-bar ul {
   width: 100%;
   height: 100%;
 }
-.safty-contents ul li a {
-  height: 60px;
-  line-height: 60px;
-  font-size: 32px;
-  color: var(--text-color);
-}
+
 .everytime {
   width: 100%;
   height: 1161px;
@@ -378,18 +388,20 @@ header .nav-bar ul {
 }
 .everytime-contents {
   position: relative;
-
   color: var(--white);
   padding-top: 240px;
 }
 .everytime-contents .everytime-title {
-  padding: 0 32px;
+  width: 100%;
+  padding: 0 0 0 32px;
   font-size: 48px;
 }
 .everytime-contents .everytime-text {
-  position: absolute;
-  top: 440px;
-  right: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-top: 72px;
+  margin-right: 36px;
   width: 640px;
   height: 517px;
 }
@@ -399,7 +411,10 @@ header .nav-bar ul {
 }
 .everytime-text h4 figure {
   background-image: url(images/Img_Marking_Dark.png);
-  background-size: 130px 32px;
+  background-size: 146px 20px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding: 0 16px;
   width: 130px;
   height: 32px;
 }
@@ -479,6 +494,10 @@ footer {
 .footer-contents .sns a img {
   width: 100%;
   height: 100%;
+}
+.footer-contents .sns a:hover {
+  opacity: 0.5;
+  transition: 0.2s;
 }
 .footer-contents .footer-menu-sns {
   max-width: 1200px;
@@ -619,7 +638,11 @@ footer {
   .banner-contents .download .down-btn {
     display: flex;
   }
-
+  .banner .page-down img {
+    width: 60px;
+    height: 60px;
+  }
+  
   .with-kickgoing .with-contents {
     padding: 100px 0;
   }
@@ -676,6 +699,8 @@ footer {
   .easy-to-use .easy-contents {
     padding: 100px 36px;
   }
+  .easy-to-use .easy-contents ul {
+  }
   .easy-to-use .easy-contents > figure {
     background-size: 176px 361px;
     width: 176px;
@@ -692,7 +717,7 @@ footer {
     padding-bottom: 0;
   }
   .easy-text ul li a figure {
-    background-size: 90px 24px;
+    background-size: 106px 14px;
     width: 90px;
     height: 24px;
   }
@@ -728,9 +753,9 @@ footer {
     height: 32px;
     margin-right: 8px;
   }
-  .safty-contents ul li a {
-    height: 20px;
-    line-height: 20px;
+  .safty-contents ul li {
+    height: 40px;
+    line-height: 40px;
     font-size: 16px;
   }
 
@@ -742,14 +767,15 @@ footer {
     padding-top: 100px;
   }
   .everytime-contents .everytime-title {
-    width: 340px;
+    margin: 0 auto;
+    padding: 0;
+    width: 300px;
     font-size: 24px;
-    padding: 0 72px;
   }
   .everytime-contents .everytime-text {
-    top: 240px;
-    right: 72px;
-    width: 340px;
+    margin: 0 auto;
+    margin-top: 36px;
+    width: 300px;
     height: 415px;
   }
   .everytime-text h4 {
@@ -757,7 +783,7 @@ footer {
     padding-bottom: 24px;
   }
   .everytime-text h4 figure {
-    background-size: 88px 24px;
+    background-size: 104px 14px;
     width: 88px;
     height: 24px;
   }
@@ -768,6 +794,9 @@ footer {
   .everytime-text .area p {
     font-size: 16px;
     padding-bottom: 16px;
+  }
+  .everytime-text a {
+    width: 300px;
   }
 
   .footer-contents {
