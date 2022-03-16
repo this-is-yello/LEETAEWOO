@@ -19,20 +19,17 @@
             
         let age = prompt("나이를 입력해 주세요.");
 
-        if(age<=0) {
+        if(age<0 || age>150) {
             alert("잘못 입력하셨습니다.")
         }
-        else if(age>=130) {
-            alert("당신은 귀신입니까?")
-        }
-        else if(age>=65) {
-            alert("당신은 노인입니다.");
-        }
-        else if(age>=20) {
-            alert("당신은 성인입니다.");
-        }
         else if(age<20) {
-            alert("당신은 미성년자입니다.");
+            alert("당신은 미성년자입니다.")
+        }
+        else if(age<65) {
+            alert("당신은 성인입니다.")
+        }
+        else if(age<150) {
+            alert("당신은 노인입니다.")
         }
     </script>
 </body>
