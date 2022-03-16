@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>당신은 <span class="gen"></span>입니다.</h1>
+
+    <script>
+        let age = prompt("당신은 몇 살 입니까?");
+
+        let char = ["미성년자", "성인", "노인"]
+
+        var generation = document.querySelector(".gen");
+
+        if(age<0||age>150) {
+            alert("잘못 입력하셨습니다.");
+        }
+        else if(age<20) {
+            generation.innerHTML = char[0]
+        }
+        else if(age<65) {
+            generation.innerHTML = char[1]
+        }
+        else {
+            generation.innerHTML = char[2]
+        }
+    </script>
+</body>
+</html>
