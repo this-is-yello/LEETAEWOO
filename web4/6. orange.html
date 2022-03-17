@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    오렌지 10개 한 바구니
+
+    <script>
+        let orange = prompt("수확한 오렌지는 몇 개입니까?");
+        let basket = orange/10;
+
+        // if (orange%10 !== 0) {
+        //     alert(parseInt(basket+1));
+        // }
+        // else {
+        //     alert(basket);
+        // }
+
+        if (orange%10 !== 0) {
+            basket++;
+        }
+        
+        alert(parseInt(basket));
+    </script>
+</body>
+</html>
