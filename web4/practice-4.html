@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin: 24px;
+        }
+
+        div {
+            float: left;
+            margin: 24px;
+            width: 100px;
+            height: 240px;
+            text-align: center;
+            border: 2px solid #000000;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>구구단을 외자!</h1>
+    <script>
+        for (let i=1; i<=9; i++) {
+            document.write ("<div>");
+            document.write ("<h2>" + i + "단" + "</h2>");
+            for (let j=1; j<=9; j++) {
+                document.write (i + "X" + j + "=" + i * j + "<br>");
+            }
+            document.write ("</div>");
+        }
+    </script>
+</body>
+</html>
