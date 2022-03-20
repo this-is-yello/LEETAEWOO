@@ -7,24 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="coffee">커피머신</button>
+    <button id="btn">커피머신</button>
     <script>
-        const coffeeButton = document.getElementById("coffee");
+        const coffeeBtn = document.getElementById("btn");
 
-        coffeeButton.addEventListener("click", coffeeMuchine);
+        coffeeBtn.addEventListener("click", machineBtn);
 
-        fuction coffeeMuchine(){
-            let coffee = 300;
+        function machineBtn() {
+            const coffee = 300;
             let money = Number(prompt("투입금액"));
             let cup = Number(prompt("몇 잔?"));
             
             if (cup*coffee > money) {
                 alert("금액부족");
             }
-            else if (cup*coffee < money) {
-                alert("거스름돈" + (money-cup*coffee) + "원");
-                alert(cup + "잔 나왔습니다.");
-                alert("맛있게드세요.");
+            else {
+                alert("거스름돈 " + (money-cup*coffee) + "원");
+                alert(cup + "잔");
+                alert("맛있게 드세요.");
             }
         }
 
