@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>커피 한잔에 300원</h1>
+
+    <button id="btn">커피 마시기</button>
+
+    <script>
+        const coffeeBtn = document.getElementById("btn");
+        coffeeBtn.addEventListener("click", machine);
+
+        function machine() {
+            const coffee = 300;
+            let money = Number(prompt("얼마를 투입 하시겠습니까?"));
+            let cup = Number(prompt("몇 잔 드시겠습니까?"));
+            let change = money - coffee * cup;
+            
+            if (money<coffee*cup) {
+                alert("투입 금액이 " +(coffee*cup-money) + "원 부족합니다.");
+            }
+            
+            else {
+                alert("거스름 돈은 " + change + "원 입니다.");
+                alert(cup + "잔 나왔습니다. 맛있게 드세요.");
+            }
+        }
+    </script>
+</body>
+</html>
