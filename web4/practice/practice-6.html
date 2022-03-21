@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            display: inline-block;
+            margin: 20px;
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            border: 2px solid #000000;
+        }
+        div:hover {
+            cursor: pointer;
+            background-color: darkgray;
+            color: white;
+        }
+
+        h3 {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div onclick="fontColorChange('red')">빨간색</div>
+    <div onclick="fontColorChange('green')">초록색</div>
+    <div onclick="fontColorChange('blue')">파란색</div>
+
+    <h3 class="font">위 버튼을 누르면 이 문장의 글자 색이 바뀝니다.</h3>
+
+    <script>
+        function fontColorChange(colorChange) {
+            document.querySelector('.font').style.color = colorChange;
+        }
+    </script>
+</body>
+</html>
