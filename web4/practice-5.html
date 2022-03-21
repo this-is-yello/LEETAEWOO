@@ -14,15 +14,15 @@
     <script>
         const coffeeBtn = document.getElementById("btn");
         coffeeBtn.addEventListener("click", machine);
+        const coffee = 300;
 
         function machine() {
-            const coffee = 300;
-            let money = Number(prompt("얼마를 투입 하시겠습니까?"));
-            let cup = Number(prompt("몇 잔 드시겠습니까?"));
-            let change = money - coffee * cup;
+            const money = Number(prompt("얼마를 투입 하시겠습니까?"));
+            const cup = Number(prompt("몇 잔 드시겠습니까?"));
+            const change = money - coffee * cup;
             
             if (money<coffee*cup) {
-                alert("투입 금액이 " + (coffee*cup-money) + "원 부족합니다.");
+                alert("투입 금액이 " + change*-1 + "원 부족합니다.");
             }
             
             else {
