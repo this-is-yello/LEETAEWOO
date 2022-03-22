@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 80px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <button class="day">오늘날짜</button>
+    <button class="time">현재시각</button>
+
+    <script>
+        const dayBtn = document.querySelector(".day");
+        dayBtn.addEventListener("click", today);
+        
+        function today() {
+            const now = new Date();
+            alert("오늘은 " + now.getFullYear() + "년 " + (now.getMonth()+1) + "월 " + now.getDate() + "일 입니다.")
+        }
+
+        const timeBtn = document.querySelector(".time");
+        timeBtn.addEventListener("click", nowTime);
+        
+        function nowTime() {
+            const now = new Date();
+            alert("현재 시각은 " + now.getHours() + "시 " + now.getMinutes() + "분 입니다.");
+        }
+    </script>
+</body>
+</html>
