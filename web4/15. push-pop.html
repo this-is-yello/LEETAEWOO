@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="input-waiting">대기등록</button>
+    <button class="waiting-list">대기자 명단</button>
+    <button class="come-in">입장</button>
+
+    <script>
+        const customer = new Array();
+
+        const inputWaiting = document.querySelector(".input-waiting");
+        const waitingList = document.querySelector(".waiting-list");
+        const comeIn = document.querySelector(".come-in");
+
+
+        inputWaiting.addEventListener("click", ()=>{
+            customer.push(prompt("대기자 명단에 등록하실, 이름을 입력해주세요."));
+            console.log(customer);
+        });
+
+        waitingList.addEventListener("click", viewList);
+
+        comeIn.addEventListener("click", come);
+
+        
+        function viewList() {
+            alert(customer + customer.length);
+        }
+
+        function come() {
+            alert(customer.shift());
+        }
+    </script>
+</body>
+</html>
