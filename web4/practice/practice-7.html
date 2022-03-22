@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            margin: 16px;
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="input-waiting">대기등록</button>
+    <button class="waiting-list">대기자 명단</button>
+    <button class="come-in">입장</button>
+
+    <script>
+        const customerList = new Array();
+
+        const inputWaiting = document.querySelector(".input-waiting");
+        const waitingList = document.querySelector(".waiting-list");
+        const comeIn = document.querySelector(".come-in");
+
+        inputWaiting.addEventListener("click", ()=> {
+            customerList.push(prompt("대기자 명단에 등록할 이름을 입력해주세요."));
+        });
+
+        waitingList.addEventListener("click", listAlert);
+
+        comeIn.addEventListener("click", enter);
+
+        function listAlert() {
+            alert("현재 대기인원은 " + customerList + " 이며, 총 " + customerList.length + "명 입니다.");
+        }
+
+        function enter() {
+            alert(customerList.shift() + "님 입장하겠습니다. 남은 대기인원은 " + customerList.length + "명 입니다.");
+        }
+    </script>
+</body>
+</html>
