@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="game-start">게임시작</button>
+
+    <script>
+        // alert("게임을 시작합니다.");
+
+        // const answer = Math.floor(Math.random()*99+1);
+        // const chance = 5;
+
+        // for(let i=0; i<chance; i++) {
+        //     let input = prompt("정답을 입력하세요.");
+
+        //     if(answer == input) {
+        //         alert("정답입니다.");
+        //         break;
+        //     }
+        //     else if(i===4) {
+        //         alert("탈락입니다");
+        //         alert("정답은 " + answer + " 이었습니다.");
+        //     }
+        //     else if(answer < input) {
+        //         alert("Down, 남은 기회는 " + (chance-i-1)  + "번 입니다.");
+        //     }
+        //     else if(answer > input) {
+        //         alert("Up, 남은 기회는 " + (chance-i-1) + "번 입니다.");
+        //     }
+        // }
+
+            const startBtn = document.querySelector(".game-start");
+            startBtn.addEventListener("click", gameStart);
+
+            function gameStart(){
+                alert("게임을 시작합니다.");
+
+                const answer = Math.floor(Math.random()*99+1);
+                const chance = 5;
+
+                let i = 0;
+                while(i<chance) {
+                    let input = prompt("정답을 입력하세요.");
+
+                    if(answer == input) {
+                        alert("정답입니다.");
+                        break;
+                    }
+                    else if(i===4) {
+                        alert("탈락입니다");
+                        alert("정답은 " + answer + " 이었습니다.");
+                    }
+                    else if(answer < input) {
+                        alert("Down, 남은 기회는 " + (chance-i-1)  + "번 입니다.");
+                    }
+                    else if(answer > input) {
+                        alert("Up, 남은 기회는 " + (chance-i-1) + "번 입니다.");
+                    }
+                    i=i+1;
+                }
+            }
+    </script>
+</body>
+</html>
