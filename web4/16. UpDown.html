@@ -44,11 +44,12 @@
                 const chance = 5;
 
                 let i = 0;
-                while(i<chance) {
-                    let input = prompt("정답을 입력하세요.");
+                while(true) {
+                    let input = prompt("정답을 입력하세요." + answer);
 
                     if(answer == input) {
                         alert("정답입니다.");
+                        alert((i+1) + "번 만에 맞췄네요!!")
                         break;
                     }
                     else if(i===4) {
