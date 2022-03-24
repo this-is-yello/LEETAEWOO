@@ -41,26 +41,21 @@
                 alert("게임을 시작합니다.");
 
                 const answer = Math.floor(Math.random()*100+1);
-                const chance = 5;
 
-                let i = 0;
+                let i = 1;
                 while(true) {
                     let input = prompt("정답을 입력하세요." + answer);
 
                     if(answer == input) {
                         alert("정답입니다.");
-                        alert((i+1) + "번 만에 맞췄네요!!")
+                        alert(i + "번 만에 맞췄네요!!")
                         break;
                     }
-                    else if(i===4) {
-                        alert("탈락입니다");
-                        alert("정답은 " + answer + " 이었습니다.");
-                    }
                     else if(answer < input) {
-                        alert("Down, 남은 기회는 " + (chance-i-1)  + "번 입니다.");
+                        alert("Down");
                     }
                     else if(answer > input) {
-                        alert("Up, 남은 기회는 " + (chance-i-1) + "번 입니다.");
+                        alert("Up");
                     }
                     i=i+1;
                 }
