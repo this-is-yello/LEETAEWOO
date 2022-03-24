@@ -41,23 +41,48 @@
                 alert("게임을 시작합니다.");
 
                 const answer = Math.floor(Math.random()*100+1);
+                let i = 0;
 
-                let i = 1;
                 while(true) {
-                    let input = prompt("정답을 입력하세요." + answer);
+                    const input = Number(prompt("정답을 입력하세요." + answer));
+                    
+                    if(input>0 && input<=100) {
+                        i=i+1;
+                        
+                        if(answer == input) {
+                            alert("정답입니다.");
+                            if(i<=5) {
+                                alert(i + "번 만에 맞췄습니다. 대단하네요.")
+                            }
+                            else if(i<=8) {
+                                alert(i + "번 만에 맞췄습니다. 멋져요")
+                            }
+                            else if(i<=10) {
+                                alert(i + "번 만에 맞췄습니다. 조금 더 노력해보세요.")
+                            }
+                            else if(i>12) {
+                                alert(i + "번 만에 맞췄습니다. 실력이 엉망이네요..")
+                            }
+                            
+                            break;
+                        }
+                        else if(answer < input) {
+                            alert("Down");
+                        }
+                        else {
+                            alert("Up");
+                        }
 
-                    if(answer == input) {
-                        alert("정답입니다.");
-                        alert(i + "번 만에 맞췄네요!!")
-                        break;
+                        if(i>=20) {
+                            alert("정답은 " + answer + "입니다.");
+                        }
+                        else if(i>=10) {
+                            alert("정답은 " + (answer-(20-i)) + "과 " + (answer+(20-i)) + "사이에 있습니다");
+                        }
                     }
-                    else if(answer < input) {
-                        alert("Down");
+                    else {
+                        alert("제대로 된 값을 입력해주세요.");
                     }
-                    else if(answer > input) {
-                        alert("Up");
-                    }
-                    i=i+1;
                 }
             }
     </script>
