@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .slide {
+            width: 400px;
+            height: 280px;
+            line-height: 280px;
+            text-align: center;
+            font-size: 24px;
+            border: 2px solid #000000;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="slide"></div>
+
+    <div class="buttons">
+        <button class="past">이전</button>
+        <button class="next">다음</button>
+    </div>
+
+    <script>
+        let carouselSlide = document.querySelector(".slide");
+
+        const pastBtn = document.querySelector(".past");
+        const nextBtn = document.querySelector(".next");
+
+        pastBtn.addEventListener("click", goPast);
+        nextBtn.addEventListener("click", goNext);
+
+        let num = 1;
+        carouselSlide.innerHTML = num;
+        
+        function goPast() {
+            if(num === 1) {
+                num = 4;
+            }
+            else {
+                num--;
+            }
+
+            carouselSlide.innerHTML = num;
+        }
+        function goNext() {
+            if(num === 4) {
+                num = 1;
+            }
+            else {
+                num++;
+            }
+
+            carouselSlide.innerHTML = num;
+        }
+    </script> -->
+
+    <div class="slide"></div>
+
+    <div class="buttons">
+        <button>이전</button>
+        <button>다음</button>
+    </div>
+
+    <script>
+        let carouselSlide = document.querySelector(".slide");
+        let num = 1;
+        carouselSlide.innerHTML = num;
+
+        const Buttons = document.querySelector(".buttons");
+        Buttons.children[0].addEventListener("click", goPast);
+        Buttons.children[1].addEventListener("click", goNext);
+
+        function goPast() {
+            if (num === 1) {
+                num=4;
+            }
+            else {
+                num--;
+            }
+            carouselSlide.innerHTML = num;
+        }
+        function goNext() {
+            if (num === 4) {
+                num=1;
+            }
+            else {
+                num++;
+            }
+            carouselSlide.innerHTML = num;
+        }
+    </script>
+</body>
+</html>
