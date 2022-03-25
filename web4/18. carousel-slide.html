@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #monitor {
+            width: 400px;
+            height: 240px;
+            border: 4px solid red;
+            /* overflow: hidden; */
+        }
+
+        .all-slide {
+            display: flex;
+            height: 240px;
+            width: 1600px;
+        }
+
+        .slide {
+            width: 400px;
+            height: 240px;
+            line-height: 240px;
+            text-align: center;
+            font-size: 32px;
+            color: gray;
+        }
+        .slide-1 {
+            background-color: cyan;
+        }
+        .slide-2 {
+            background-color: magenta;
+        }
+        .slide-3 {
+            background-color: yellow;
+        }
+        .slide-4 {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="monitor">
+        <div class="all-slide">
+            <div class="slide slide-1">1</div>
+            <div class="slide slide-2">2</div>
+            <div class="slide slide-3">3</div>
+            <div class="slide slide-4">4</div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button>이전</button>
+        <button>다음</button>
+    </div>
+
+    <script>
+        let carouselSlide = document.getElementById("all-slide");
+
+        const pastBtn = document.querySelector(".past");
+        const nextBtn = document.querySelector(".next");
+
+        pastBtn.addEventListener("click", goPast);
+        nextBtn.addEventListener("click", goNext);
+
+        let num = 0;
+        
+        function goPast() {
+            if(num === 0) {
+                num = 3;
+            }
+            else {
+                num--;
+            }
+
+        }
+        function goNext() {
+            if(num === 0) {
+                num = 3;
+            }
+            else {
+                num++;
+            }
+        }
+    </script>
+</body>
+</html>
