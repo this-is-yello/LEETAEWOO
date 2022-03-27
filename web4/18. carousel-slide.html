@@ -10,7 +10,7 @@
             width: 400px;
             height: 240px;
             border: 4px solid red;
-            /* overflow: hidden; */
+            overflow: hidden;
         }
 
         .all-slide {
@@ -57,14 +57,11 @@
     </div>
 
     <script>
-        let carouselSlide = document.getElementById("all-slide");
+        const carouselSlide = document.getElementById("monitor");
 
-        const pastBtn = document.querySelector(".past");
-        const nextBtn = document.querySelector(".next");
-
-        pastBtn.addEventListener("click", goPast);
-        nextBtn.addEventListener("click", goNext);
-
+        const btns = document.querySelector(".buttons");
+        btns.children[0].addEventListener("click", goPast);
+        btns.children[1].addEventListener("click", goNext);
         let num = 0;
         
         function goPast() {
@@ -74,15 +71,18 @@
             else {
                 num--;
             }
-
+            console.log(num);
+            carouselSlide.children[0].style.transform = "translateX(-" + (num*400) + "px)";
         }
         function goNext() {
-            if(num === 0) {
-                num = 3;
+            if(num === 3) {
+                num = 0;
             }
             else {
                 num++;
             }
+            console.log(num);
+            carouselSlide.children[0].style.transform = "translateX(-" + (num*400) + "px)";
         }
     </script>
 </body>
