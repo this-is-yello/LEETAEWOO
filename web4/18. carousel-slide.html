@@ -16,7 +16,6 @@
         .all-slide {
             display: flex;
             height: 240px;
-            width: 1600px;
         }
 
         .slide {
@@ -39,6 +38,13 @@
         .slide-4 {
             background-color: black;
         }
+
+        .buttons {
+            margin-top: 16px;
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
 </head>
 <body>
@@ -59,29 +65,57 @@
     <script>
         const carouselSlide = document.getElementById("monitor");
 
+        const slider = document.querySelector(".all-slide");
+        const first = slider.firstElementChild.cloneNode(true);
+        const last = slider.lastElementChild.cloneNode(true);
+
+        slider.appendChild(first);
+        slider.insertBefore(last, slider.firstElementChild);
+
+        const slideWidth = 400;
+
+        slider.style.width = slider.childElementCount * slideWidth + "px";
+
+
         const btns = document.querySelector(".buttons");
         btns.children[0].addEventListener("click", goPast);
         btns.children[1].addEventListener("click", goNext);
-        let num = 0;
+
+        let num = 1;
+        carouselSlide.children[0].style.transform = "translateX(-" + (num*400) + "px)";
         
         function goPast() {
-            if(num === 0) {
-                num = 3;
-            }
-            else {
-                num--;
-            }
+            num--;
+            
+            setTimeout(()=> {
+                if(num <= 0) {
+                    num=slider.childElementCount-2;
+                    moveSlide(0);
+                }
+                console.log(num);
+            }, 1000);
+            
             console.log(num);
-            carouselSlide.children[0].style.transform = "translateX(-" + (num*400) + "px)";
+            moveSlide(1);
         }
+
         function goNext() {
-            if(num === 3) {
-                num = 0;
-            }
-            else {
-                num++;
-            }
+            num++;
+            
+            setTimeout(()=> {
+                if(num >= slider.childElementCount-1) {
+                    num=1;
+                    moveSlide(0);
+                }
+                console.log(num);
+            }, 1000);
+            
             console.log(num);
+            moveSlide(1);
+        }
+
+        function moveSlide(time) {
+            slider.style.transition = time + "s"
             carouselSlide.children[0].style.transform = "translateX(-" + (num*400) + "px)";
         }
     </script>
