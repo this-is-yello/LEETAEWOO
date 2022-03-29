@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #monitor {
+            width: 400px;
+            height: 240px;
+            border: 4px solid red;
+            overflow: hidden;
+        }
+
+        .all-slide {
+            display: flex;
+            height: 240px;
+        }
+
+        .slide {
+            width: 400px;
+            height: 240px;
+            line-height: 240px;
+            text-align: center;
+            font-size: 32px;
+            color: gray;
+        }
+        .slide-1 {
+            background-color: cyan;
+        }
+        .slide-2 {
+            background-color: magenta;
+        }
+        .slide-3 {
+            background-color: yellow;
+        }
+        .slide-4 {
+            background-color: black;
+        }
+
+        .buttons {
+            margin-top: 16px;
+            width: 400px;
+            height: 30px;
+            line-height: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-container {
+            width: 200px;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .div-button {
+            margin: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: gray;
+            border-radius: 50%;
+        }
+
+        .active {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="monitor">
+        <div class="all-slide">
+            <div class="slide slide-1">1</div>
+            <div class="slide slide-2">2</div>
+            <div class="slide slide-3">3</div>
+            <div class="slide slide-4">4</div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button>이전</button>
+        <div class="button-container"></div>
+        <button>다음</button>
+    </div>
+
+    <script>
+        const carouselSlide = document.getElementById("monitor");
+
+        const slider = document.querySelector(".all-slide");
+        const first = slider.firstElementChild.cloneNode(true);
+        const last = slider.lastElementChild.cloneNode(true);
+
+        const sliderLength = slider.childElementCount;
+        const btnContainer = document.querySelector(".button-container");
+
+        for(i=0; i<sliderLength; i++) {
+            const makeDiv = document.createElement("div");
+            makeDiv.classList.add("div-button");
+            btnContainer.appendChild(makeDiv);
+        }
+        btnContainer.children[0].classList.add("active");
+        
+        slider.appendChild(first);
+        slider.insertBefore(last, slider.firstElementChild);
+
+        const slideWidth = 400;
+
+        let moveCheck = true;
+
+        slider.style.width = slider.childElementCount * slideWidth + "px";
+
+
+        const btns = document.querySelector(".buttons");
+        btns.children[0].addEventListener("click", goPast);
+        btns.children[2].addEventListener("click", goNext);
+
+        let num = 1;
+        carouselSlide.children[0].style.transform = "translateX(-" + (num*400) + "px)";
+        
+        function goPast() {
+            if(moveCheck) {
+                num--;
+                moveCheck = false;
+
+                setTimeout(()=> {
+                    if(num === 0) {
+                        num=slider.childElementCount-2;
+                        moveSlide(0);
+                    }
+
+                    console.log(num);
+                    moveCheck = true;
+                }, 1000);
+                
+                console.log(num);
+                moveSlide(1);
+            }
+        }
+
+        function goNext() {
+            if(moveCheck) {
+                num++;
+                moveCheck = false;
+
+                setTimeout(()=> {
+                    if(num === slider.childElementCount-1) {
+                        num=1;
+                        moveSlide(0);
+                    }
+
+                    console.log(num);
+                    moveCheck = true;
+                }, 1000);
+                
+                console.log(num);
+                moveSlide(1);
+            }
+        }
+
+        function moveSlide(time) {
+            slider.style.transition = time + "s";
+            carouselSlide.children[0].style.transform = "translateX(-" + (num*400) + "px)";
+        }
+    </script>
+</body>
+</html>
