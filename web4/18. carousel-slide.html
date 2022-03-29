@@ -74,6 +74,8 @@
 
         const slideWidth = 400;
 
+        let moveCheck = true;
+
         slider.style.width = slider.childElementCount * slideWidth + "px";
 
 
@@ -85,33 +87,43 @@
         carouselSlide.children[0].style.transform = "translateX(-" + (num*400) + "px)";
         
         function goPast() {
-            num--;
-            
-            setTimeout(()=> {
-                if(num <= 0) {
-                    num=slider.childElementCount-2;
-                    moveSlide(0);
-                }
+            if(moveCheck) {
+                num--;
+                moveCheck = false;
+
+                setTimeout(()=> {
+                    if(num === 0) {
+                        num=slider.childElementCount-2;
+                        moveSlide(0);
+                    }
+
+                    console.log(num);
+                    moveCheck = true;
+                }, 1000);
+                
                 console.log(num);
-            }, 1000);
-            
-            console.log(num);
-            moveSlide(1);
+                moveSlide(1);
+            }
         }
 
         function goNext() {
-            num++;
-            
-            setTimeout(()=> {
-                if(num >= slider.childElementCount-1) {
-                    num=1;
-                    moveSlide(0);
-                }
+            if(moveCheck) {
+                num++;
+                moveCheck = false;
+
+                setTimeout(()=> {
+                    if(num === slider.childElementCount-1) {
+                        num=1;
+                        moveSlide(0);
+                    }
+
+                    console.log(num);
+                    moveCheck = true;
+                }, 1000);
+                
                 console.log(num);
-            }, 1000);
-            
-            console.log(num);
-            moveSlide(1);
+                moveSlide(1);
+            }
         }
 
         function moveSlide(time) {
