@@ -86,36 +86,47 @@
         const carouselSlide = document.getElementById("monitor");
 
         const slider = document.querySelector(".all-slide");
+        const slideWidth = 400;
+
+        const btns = document.querySelector(".buttons");
         const first = slider.firstElementChild.cloneNode(true);
         const last = slider.lastElementChild.cloneNode(true);
 
-        const sliderLength = slider.childElementCount;
         const btnContainer = document.querySelector(".button-container");
 
-        for(i=0; i<sliderLength; i++) {
-            const makeDiv = document.createElement("div");
-            makeDiv.classList.add("div-button");
-            btnContainer.appendChild(makeDiv);
-        }
-        btnContainer.children[0].classList.add("active");
-        
+        const sliderLength = slider.childElementCount;
+
+        let num = 1;
+        let moveCheck = true;
+/* ------------------------------------------------------------------------ */
+
+
         slider.appendChild(first);
         slider.insertBefore(last, slider.firstElementChild);
 
-        const slideWidth = 400;
-
-        let moveCheck = true;
-
         slider.style.width = slider.childElementCount * slideWidth + "px";
 
-
-        const btns = document.querySelector(".buttons");
         btns.children[0].addEventListener("click", goPast);
         btns.children[2].addEventListener("click", goNext);
 
-        let num = 1;
         carouselSlide.children[0].style.transform = "translateX(-" + (num*400) + "px)";
-        
+/* ------------------------------------------------------------------------ */
+
+
+        for(let i=0; i<sliderLength; i++) {
+            const makeDiv = document.createElement("div");
+            makeDiv.classList.add("div-button");
+            btnContainer.appendChild(makeDiv);
+
+            makeDiv.addEventListener("click", ()=> {
+                num = i+1;
+                moveSlide(1);
+            });
+        }
+        btnContainer.children[0].classList.add("active");
+/* ------------------------------------------------------------------------ */
+
+
         function goPast() {
             if(moveCheck) {
                 num--;
@@ -135,7 +146,6 @@
                 moveSlide(1);
             }
         }
-
         function goNext() {
             if(moveCheck) {
                 num++;
@@ -155,10 +165,27 @@
                 moveSlide(1);
             }
         }
+        function updateBtns() {
+            for(let i=0; i<sliderLength; i++) {
+                btnContainer.children[i].classList.remove("active");
+            }
+            if(num===0) {
+                btnContainer.children[sliderLength-1].classList.add("active");
+            }
+            else if(num === sliderLength+1) {
+                btnContainer.children[0].classList.add("active");
+            }
+            else {
+                btnContainer.children[num-1].classList.add("active");
+            }
+        }
+
 
         function moveSlide(time) {
             slider.style.transition = time + "s";
             carouselSlide.children[0].style.transform = "translateX(-" + (num*400) + "px)";
+
+            updateBtns();
         }
     </script>
 </body>
