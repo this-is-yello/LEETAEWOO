@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .introduce {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .contents {
+            width: 400px;
+            height: 560px;
+            line-height: 560px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            opacity: 0;
+            transition: 1s;
+        }
+        .hi {
+            transform: translateY(-300px);
+        }
+        .name {
+            transform: translateY(300px);
+        }
+        .age {
+            transform: translateX(-300px);
+        }
+        .male {
+            transform: translateX(300px);
+        }
+        .thx {
+            transform: translate(-300px, 300px);
+        }
+        .in {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="introduce">
+        <p class="contents hi">안녕하세요!</p>
+        <p class="contents name">이태우입니다.</p>
+        <p class="contents age">26살이고,</p>
+        <p class="contents male">남자입니다.</p>
+        <p class="contents thx">감사합니다.</p>
+    </div>
+
+    <script>
+        const contents = document.getElementsByClassName(".contents");
+
+        window.addEventListener("scroll", ()=>{
+            const winH = window.innerHeight;
+
+            for(i=0; i<contents.length; i++) {
+                const contentsTop = contents[i].getBoundingClientRect().top;
+
+                if(contentsTop - winH < 0) {
+                    contents[i].classList.add("in");
+                }
+            }
+        });
+
+        // const hiObject = document.querySelector(".hi");
+        // const nameObject = document.querySelector(".name");
+        // const ageObject = document.querySelector(".age");
+        // const maleObject = document.querySelector(".male");
+        // const thxObject = document.querySelector(".thx");
+        
+        // window.addEventListener("scroll", ()=>{
+        //     let winH = window.innerHeight;
+        //     const hiBottom = hiObject.getBoundingClientRect().top;
+        //     if(hiBottom - winH < 0) {
+        //         hiObject.classList.add("in");
+        //     }
+        // });
+        // window.addEventListener("scroll", ()=>{
+        //     let winH = window.innerHeight;
+        //     const nameBottom = nameObject.getBoundingClientRect().top;
+        //     if(nameBottom - winH < 0) {
+        //         nameObject.classList.add("in");
+        //     }
+        // });
+        // window.addEventListener("scroll", ()=>{
+        //     let winH = window.innerHeight;
+        //     const ageBottom = ageObject.getBoundingClientRect().top;
+        //     if(ageBottom - winH < 0) {
+        //         ageObject.classList.add("in");
+        //     }
+        // });
+        // window.addEventListener("scroll", ()=>{
+        //     let winH = window.innerHeight;
+        //     const maleBottom = maleObject.getBoundingClientRect().top;
+        //     if(maleBottom - winH < 0) {
+        //         maleObject.classList.add("in");
+        //     }
+        // });
+        // window.addEventListener("scroll", ()=>{
+        //     let winH = window.innerHeight;
+        //     const thxBottom = thxObject.getBoundingClientRect().top;
+        //     if(thxBottom - winH < 0) {
+        //         thxObject.classList.add("in");
+        //     }
+        // });
+    </script>
+</body>
+</html>
