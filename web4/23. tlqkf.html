@@ -11,86 +11,64 @@
             padding: 0;
             list-style: none;
         }
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 40px;
-            background-color: gray;
-        }
-
-        .container {
-            width: 400px;
-            height: 640px;
-            background-color: white;
-            border-radius: 16px;
+        #container {  
+            margin: 0 auto;
+            margin-top: 40px;
+            padding-top: 20px;
+            width: 440px;
+            height: 560px;
+            border: 3px solid #000000;
         }
         .search-bar {
+            margin: 0 auto;
             display: flex;
-            width: 400px;
+            width: 420px;
             height: 30px;
         }
         input {
             width: 350px;
             height: 30px;
-            border-top-left-radius: 16px;
             box-sizing: border-box;
         }
-        .search-btn {
-            width: 50px;
+        button {
+            width: 70px;
             height: 30px;
-            line-height: 30px;
-            text-align: center;
-            border-top-right-radius: 16px;
-            box-sizing: border-box;
-            background-color: black;
-            color: white;
-            outline: none;
-        }
-        .search-btn:hover {
-            cursor: pointer;
-            color: gray;
-        }
-
-        .keyword {
-            margin: 0 auto;
-            width: 380px;
-            height: 50px;
-            line-height: 50px;
-            font-size: 20px;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
         }
         li {
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
-            width: 380px;
+            width: 400px;
             height: 40px;
             line-height: 40px;
         }
         span {
             color: red;
         }
-        span:hover {
-            cursor: pointer;
-            color: blue;
+        li:hover {
+            cursor:pointer;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         <div class="search-bar">
-            <input type="text" class="search">
-            <div class="search-btn">검색</div>
+            <input type="text" class="input">
+            <button>검색</button>
         </div>
-        <div class="keyword">최근 검색어</div>
-        <ul class="history">
-            <li>검색어 입니다<span class="del-btn">삭제</span></li>
-        </ul>
-    </div>
 
+        <ul class="history">
+            <li>검색어입니다.<span>삭제</span></li>
+        </ul>  
+    </div>
     <script>
-        const delete = document.querySelector(".del-btn");
-        const 
+        function keyword() {
+            const input = document.querySelector(".input");
+            const searchHistory = document.createElement("li");
+        }
     </script>
 </body>
 </html>
