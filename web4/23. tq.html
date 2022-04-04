@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #container {  
+            margin: 0 auto;
+            margin-top: 40px;
+            padding-top: 20px;
+            width: 440px;
+            height: 560px;
+            border: 3px solid #000000;
+        }
+        .search-bar {
+            margin: 0 auto;
+            display: flex;
+            width: 420px;
+            height: 30px;
+        }
+        input {
+            width: 350px;
+            height: 30px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 70px;
+            height: 30px;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+        }
+        li {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            height: 40px;
+            line-height: 40px;
+        }
+        span {
+            color: red;
+        }
+        li:hover {
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="search-bar">
+            <input type="text" class="input">
+            <button>검색</button>
+        </div>
+
+        <ul class="history">
+            <li>검색어입니다.<span>삭제</span></li>
+        </ul>  
+    </div>
+    <script>
+        function keyword() {
+            const input = document.querySelector(".input");
+            const searchHistory = document.createElement("li");
+            ....................appendChild
+        }
+    </script>
+</body>
+</html>
