@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #container {
+            margin: 0 auto;
+            margin-top: 40px;
+            width: 440px;
+            height: 560px;
+            border: 3px solid #000000;
+        }
+        h1 {
+            width: 440px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+        .input-bar {
+            margin: 0 auto;
+            display: flex;
+            width: 420px;
+            height: 30px;
+        }
+        .typing {
+            width: 350px;
+            height: 30px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 70px;
+            height: 30px;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 400px;
+            height: 50px;
+            line-height: 50px;
+        }
+        p {
+            width: 100%;
+            margin-left: 16px;
+        }
+        span {
+            width: 50px;
+            color: red;
+        }
+        span:hover {
+            cursor: pointer;
+        }
+
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>할 일</h1>
+        <div class="input-bar">
+            <input type="text" class="typing">
+            <button class="input-btn">추가</button>
+        </div>
+
+        <ul class="list">
+            <!-- <li>
+                <input type="checkbox" name="" id="">
+                <p>fvffffffff<span>삭제</span></p>
+            </li> -->
+        </ul>  
+    </div>
+
+    <script>
+        const inputBtn = document.querySelector(".input-btn");
+        const list = document.querySelector(".list");
+
+        inputBtn.addEventListener("click", addList);
+        window.addEventListener("keydown")
+
+        function addList() {
+            const typing = document.querySelector(".typing");
+            const newList = document.createElement("li");
+            const inputNode = document.createElement("input");
+            const textNode = document.createTextNode(typing.value);
+            const pNode = document.createElement("p");
+            
+            inputNode.setAttribute("type", "checkbox");
+            pNode.appendChild(textNode);
+            newList.appendChild(inputNode);
+            newList.appendChild(pNode);
+
+            inputNode.addEventListener("change", ()=> {
+                if(inputNode.checked) {
+                    pNode.classList.add("done");
+                }
+                else {
+                    pNode.classList.remove("done");
+                }
+            });
+
+            const delSpan = document.createElement("span");
+            const delTextNode = document.createTextNode("삭제");
+
+            delSpan.appendChild(delTextNode);
+
+            newList.appendChild(delSpan);
+            list.insertBefore(newList, list.firstChild);
+            typing.value="";
+
+            delSpan.addEventListener("click", ()=>{
+                list.removeChild(delSpan.parentNode);
+            });
+
+
+            
+        }
+    </script>
+</body>
+</html>
