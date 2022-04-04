@@ -90,8 +90,12 @@
         const list = document.querySelector(".list");
 
         inputBtn.addEventListener("click", addList);
-        window.addEventListener("keydown")
-
+        window.addEventListener("keydown", e=> {
+            if(e.key === "Enter") {
+                addList();
+            }
+        })
+;
         function addList() {
             const typing = document.querySelector(".typing");
             const newList = document.createElement("li");
@@ -124,10 +128,7 @@
 
             delSpan.addEventListener("click", ()=>{
                 list.removeChild(delSpan.parentNode);
-            });
-
-
-            
+            });        
         }
     </script>
 </body>
