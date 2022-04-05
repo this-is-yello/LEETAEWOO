@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("가위바위보 게임을 시작합니다.");
+
+        const npc = Math.floor(Math.random()*3+1);
+        
+        const gameBoard = ["바위","가위","보"];
+        
+        input();
+        inGame();
+        
+        function input() {
+            let user = prompt("가위, 바위, 보 중에 어떤걸 내시겠습니까?");
+            const rock = 1;
+            const scissors = 2;
+            const paper = 3;
+            if(user=="가위") {
+                user=scissors;
+            }
+            else if(user=="바위") {
+                user=rock;
+            }
+            else if(user=="보") {
+                user=paper;
+            }
+            else {
+                alert("잘못입력하셨습니다.");
+                input();
+            }
+        }
+
+        function inGame() {
+
+            alert("저는 " + gameBoard[npc-1] + ", 당신은 " + gameBoard[user-1] + "를 냈습니다.");
+            
+            if (npc==user){
+                alert("Draw");
+            }
+            else if(npc==1 && user==3 || npc==2 && user==1 || npc==3 && user==2){
+                alert("User Win");
+            }
+            else {
+                alert("Npc Win");
+            }
+        }
+    </script>
+</body>
+</html>
